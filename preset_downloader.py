@@ -15,6 +15,12 @@ from typing import List, Dict, Any, Tuple
 import sys
 import os
 
+# Windows 控制台编码修复
+if sys.platform == 'win32':
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 
 def load_env_file():
     """加载 .env 文件"""
@@ -174,19 +180,28 @@ class PresetDownloader:
                     content = await resp.text()
                     data = json.loads(content)
 
-                    # 预设文件特征
-                    preset_keys = ['name', 'description', 'personality', 'first_mes', 'mes_example', 'char_persona']
+                    # 预设文件特征 (TavernAI/SillyTavern)
+                    preset_keys = ['name', 'description', 'personality', 'first_mes', 'mes_example',
+                                   'char_persona', 'prompts', 'impersonation_prompt', 'new_chat_prompt']
                     if any(key in data for key in preset_keys):
                         return 'preset'
 
                     # 正则文件特征
-                    regex_keys = ['regex', 'replace', 'pattern', 'scripts', 'substitutions']
+                    regex_keys = ['regex', 'replace', 'pattern', 'scripts', 'substitutions',
+                                  'findRegex', 'replaceString', 'isEnabled']
                     if any(key in data for key in regex_keys):
                         return 'regex'
 
+                    # 检查是否是数组形式的正则脚本
+                    if isinstance(data, list) and len(data) > 0:
+                        first = data[0]
+                        if isinstance(first, dict):
+                            if any(k in first for k in ['regex', 'pattern', 'findRegex']):
+                                return 'regex'
+
                     return 'unknown'
-        except:
-            pass
+        except Exception as e:
+            print(f'    [WARN] JSON analysis error: {e}')
         return 'unknown'
 
     async def process_hot_threads(self, channel_id: str, days: int = 90, min_reactions: int = 5, min_messages: int = 10):
@@ -269,17 +284,22 @@ class PresetDownloader:
                 thread_dir = self.output_dir / f"{date_prefix}{safe_name}"
                 thread_dir.mkdir(exist_ok=True)
 
-                # 获取帖子消息
+                # 获取帖子消息（按正序获取，首条消息是说明）
                 messages = await self.get_messages(session, thread_id, limit=100)
+                # Discord 返回倒序（最新在前），需要反转
+                messages.reverse()
 
                 # 收集所有附件
                 all_attachments = []
                 first_message_content = ""
 
                 for msg_idx, msg in enumerate(messages):
-                    # 保存首条消息内容（说明）
+                    # 保存首条消息内容（说明）- 现在 messages[0] 是最早的
                     if msg_idx == 0:
                         first_message_content = msg.get('content', '')
+                        # 如果首条消息没有内容但有附件，尝试下一条
+                        if not first_message_content and len(messages) > 1:
+                            first_message_content = messages[1].get('content', '')
 
                     # 收集附件
                     for attachment in msg.get('attachments', []):
