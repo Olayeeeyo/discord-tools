@@ -21,6 +21,9 @@ ENV/
 !config.json
 !example.config.json
 
+# Downloads (user data)
+downloads/
+
 # Logs
 *.log
 
@@ -30,4 +33,5 @@ Thumbs.db
 
 # Environment variables
 .env
+
 
