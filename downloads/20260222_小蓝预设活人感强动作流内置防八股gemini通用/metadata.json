@@ -1,0 +1,71 @@
+{
+  "thread_id": "1474995374958842012",
+  "thread_name": "小蓝预设|活人感强|动作流|内置防八股|gemini通用",
+  "created_at": "2026-02-22T05:05:01.479000+00:00",
+  "message_count": 34,
+  "total_reactions": 0,
+  "author_id": "1407717640990097581",
+  "first_message": "结构简单，文风偏向于洁简与动作流，活人感强，主动推剧情，内置防八股。情绪控制也有，但没怎么测试这个\n\n注:我是用3.0/3.1por玩的\n\n\n预设:https://discord.com/channels/1134557553011998840/1474995374958842012/1479366625848197202\n\n正则:\n1.https://discord.com/channels/1134557553011998840/1474995374958842012/1476233237021065282\n2.https://discord.com/channels/1134557553011998840/1474995374958842012/1479366749551067300",
+  "attachments": [
+    {
+      "filename": "1.json",
+      "type": "preset",
+      "size": 40214,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-1.json",
+      "type": "regex",
+      "size": 540,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-2.json",
+      "type": "regex",
+      "size": 433,
+      "downloaded": true
+    },
+    {
+      "filename": "regex--.json",
+      "type": "regex",
+      "size": 357,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-.json",
+      "type": "regex",
+      "size": 394,
+      "downloaded": true
+    },
+    {
+      "filename": "19dc29df2b740253.json",
+      "type": "preset",
+      "size": 69499,
+      "downloaded": true
+    },
+    {
+      "filename": "f33d33f6d04ee80a.json",
+      "type": "preset",
+      "size": 71659,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-3.json",
+      "type": "regex",
+      "size": 613,
+      "downloaded": true
+    },
+    {
+      "filename": "b2c3d3449429b455.json",
+      "type": "preset",
+      "size": 65849,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-.json",
+      "type": "regex",
+      "size": 605,
+      "downloaded": true
+    }
+  ]
+}

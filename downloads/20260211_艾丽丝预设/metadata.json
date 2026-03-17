@@ -1,0 +1,35 @@
+{
+  "thread_id": "1470952849801220270",
+  "thread_name": "艾丽丝预设",
+  "created_at": "2026-02-11T01:21:28.375000+00:00",
+  "message_count": 33,
+  "total_reactions": 0,
+  "author_id": "1467134583492448307",
+  "first_message": "艾丽丝预设，更新到了103个版本，现在已经完全成型，主要内容NPC人性化预设，超长内容，超细腻文风，需要额外配合正则，\n由：\n<story>([\\s\\S]*?)</story>\n包裹正文，减少把正文发给ai。\n由：\n</StatusBlock>([\\s\\S]*?)</StatusBlock>\n包裹状态栏进行隐藏，但需要发个ai\n由：\n/<thinking>[\\s\\S]*</thinking>/g\n包裹思维链进行隐藏。\n软破：声明虚拟艺术行为。",
+  "attachments": [
+    {
+      "filename": "Tavo_New_Alice_7.1748_eU11.json",
+      "type": "preset",
+      "size": 265005,
+      "downloaded": true
+    },
+    {
+      "filename": "Tavo__f0s2.zip",
+      "type": "other",
+      "size": 1103,
+      "downloaded": true
+    },
+    {
+      "filename": "c.docx",
+      "type": "other",
+      "size": 8867,
+      "downloaded": true
+    },
+    {
+      "filename": "A2.docx",
+      "type": "other",
+      "size": 17089,
+      "downloaded": true
+    }
+  ]
+}

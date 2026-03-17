@@ -1,0 +1,111 @@
+{
+  "total_presets": 25,
+  "methodology_distribution": {
+    "thinking_framework": 19,
+    "character_building": 24,
+    "writing_style": 23,
+    "scene_construction": 0,
+    "dialogue_design": 0,
+    "emotion_expression": 0,
+    "nsfw_crafting": 24,
+    "constraint_mechanism": 24,
+    "quality_control": 11,
+    "creative_technique": 16
+  },
+  "technique_frequency": {
+    "tag_system": 1225,
+    "scene_building": 1076,
+    "constraint_definition": 1022,
+    "emotion_layer": 907,
+    "character_anchor": 696,
+    "draft_system": 425,
+    "style_control": 405,
+    "creative_mode": 293,
+    "nsfw_module": 261,
+    "example_driven": 254,
+    "step_by_step": 219,
+    "self_check": 152,
+    "cot_thinking": 104,
+    "persona_override": 82,
+    "instruction_hierarchy": 82
+  },
+  "top_prompts_by_length": [
+    {
+      "name": "SPreset配置",
+      "source": "v1.45by_8.json",
+      "length": 30878,
+      "summary": "{\"ChatSquash\":{\"enabled\":false,\"separate_chat_history\":false,\"parse_clewd\":true,\"user_role_system\":f"
+    },
+    {
+      "name": "3.4全方位渲染引擎",
+      "source": "Tavo_New_Alice_7.1748_eU11.json",
+      "length": 25365,
+      "summary": "＊＊ ＊＊【3.4 全方位渲染引擎】—— 空间解构、纹路/光泽/物理状态描写模板（运行库） | 高细节全方位渲染人物物品描写引擎●加强版（用词强化版）"
+    },
+    {
+      "name": "4.0男女区分",
+      "source": "Tavo_New_Alice_7.1748_eU11.json",
+      "length": 20147,
+      "summary": "＊＊ ＊＊【4.0 男女区分系统】—— 生理/行为/认知/感官差异模板（运行库） | class FictionalCharacterSexDifferentiationFramework:"
+    },
+    {
+      "name": "[九型]九型人格總成",
+      "source": "2.json",
+      "length": 13722,
+      "summary": "<type09_The Peacemaker> | * **平易近人、謙遜的類型: 包容、可靠、親切、自滿**"
+    },
+    {
+      "name": "└选*趣味塔罗",
+      "source": "v1.45by_8.json",
+      "length": 6830,
+      "summary": "({{random::The Fool,The Magician,The High Priestess,The Empress,The Emperor,The Hierophant,The Lover"
+    },
+    {
+      "name": "SPreset配置",
+      "source": "GeminiV1.2_1.json",
+      "length": 6755,
+      "summary": "{\"ChatSquash\":{\"enabled\":false,\"separate_chat_history\":false,\"parse_clewd\":true,\"role\":\"assistant\",\""
+    },
+    {
+      "name": "SPreset配置",
+      "source": "GeminiV1.5.json",
+      "length": 6755,
+      "summary": "{\"ChatSquash\":{\"enabled\":false,\"separate_chat_history\":false,\"parse_clewd\":true,\"role\":\"assistant\",\""
+    },
+    {
+      "name": "SPreset配置",
+      "source": "GeminiV1.51.json",
+      "length": 6755,
+      "summary": "{\"ChatSquash\":{\"enabled\":false,\"separate_chat_history\":false,\"parse_clewd\":true,\"role\":\"assistant\",\""
+    },
+    {
+      "name": "SPreset配置",
+      "source": "GeminiV1_5.json",
+      "length": 6755,
+      "summary": "{\"ChatSquash\":{\"enabled\":false,\"separate_chat_history\":false,\"parse_clewd\":true,\"role\":\"assistant\",\""
+    },
+    {
+      "name": "草稿cot-全文",
+      "source": "GeminiV1.2_1.json",
+      "length": 6711,
+      "summary": "1. **HIDDEN PROCESS:** All drafting and revision steps (Phase 1 & 2) MUST be enclosed inside HTML co"
+    }
+  ],
+  "parameter_ranges": {
+    "temperature": {
+      "min": 0.86,
+      "max": 1.35,
+      "avg": 1.0495454545454546
+    },
+    "top_p": {
+      "min": 0.91,
+      "max": 1,
+      "avg": 0.9804545454545455
+    },
+    "frequency_penalty": {
+      "min": 0,
+      "max": 0.3,
+      "avg": 0.10272727272727272
+    }
+  }
+}

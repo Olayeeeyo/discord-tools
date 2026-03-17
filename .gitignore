@@ -16,14 +16,6 @@ ENV/
 *.swp
 *.swo
 
-# Output files
-*.json
-!config.json
-!example.config.json
-
-# Downloads (user data)
-downloads/
-
 # Logs
 *.log
 

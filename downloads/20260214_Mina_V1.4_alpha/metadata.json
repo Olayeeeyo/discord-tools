@@ -1,0 +1,41 @@
+{
+  "thread_id": "1472121646637907968",
+  "thread_name": "Mina_V1.4_alpha",
+  "created_at": "2026-02-14T06:45:51.256000+00:00",
+  "message_count": 119,
+  "total_reactions": 0,
+  "author_id": "1436377142358442177",
+  "first_message": "（紧急启动）",
+  "attachments": [
+    {
+      "filename": "Screenshot_2026-02-15-09-53-25-66_84d3000e3f4017145260f7618db1d683.jpg",
+      "type": "image",
+      "size": 194432,
+      "downloaded": true
+    },
+    {
+      "filename": "Mina_V1.4_ST_SP.json",
+      "type": "preset",
+      "size": 19680,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-02-15-19-38-43-06_572064f74bd5f9fa804b05334aa4f912.jpg",
+      "type": "image",
+      "size": 192079,
+      "downloaded": true
+    },
+    {
+      "filename": "Mina_V1.4_ST_SP.json",
+      "type": "preset",
+      "size": 32530,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-02-19-18-54-58-22_df198e732186825c8df26e3c5a10d7cd.jpg",
+      "type": "image",
+      "size": 128260,
+      "downloaded": true
+    }
+  ]
+}

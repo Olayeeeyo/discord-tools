@@ -1,0 +1,17 @@
+{
+    "id": "2ae60982-a6a3-443d-90bf-c8e3feb506bc",
+    "scriptName": "隐藏思维链",
+    "findRegex": "([\\s\\S]*)<\\/(?:(?:deep_)?thinking(?:ing)?)>",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

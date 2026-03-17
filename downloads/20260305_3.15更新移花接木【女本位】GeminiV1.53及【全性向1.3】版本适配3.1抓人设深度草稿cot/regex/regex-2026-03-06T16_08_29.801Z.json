@@ -1,0 +1,348 @@
+[
+    {
+        "id": "f8bb46d7-3f57-4127-a3a0-c3c14ed3afef",
+        "scriptName": "1）【小说】不发送预设思维链",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/<thinking>[\\s\\S]*?<\\/thinking>/gm",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "64b14b67-f71f-45fd-a163-e24e5765ebda",
+        "scriptName": "2）【小说】预设思维链美化",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "<thinking>([\\s\\S]*?)<\\/thinking>",
+        "trimStrings": [],
+        "replaceString": "<details class=\"ins-think-tag\">\n  <summary>📖小说之神</summary>\n  <div class=\"ins-think-content\">$1</div>\n</details>\n\n<style>\n.ins-think-tag {\n  position: relative;\n  background: rgba(255, 255, 255, 0.4);\n  backdrop-filter: blur(12px) saturate(160%);\n  -webkit-backdrop-filter: blur(12px) saturate(160%);\n  border-radius: 10px;\n  padding: 6px 10px;\n  margin: 6px 0;\n  border: 1px solid rgba(255, 255, 255, 0.5);\n  box-shadow: \n    0 2px 8px rgba(0, 0, 0, 0.03),\n    inset 0 0 0 1px rgba(255, 255, 255, 0.6);\n  display: inline-block;\n  vertical-align: top;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n  font-size: 14px;\n}\n\n.ins-think-tag::before {\n  content: '';\n  position: absolute;\n  top: -8px; left: -8px; right: -8px; bottom: -8px;\n  background: radial-gradient(circle at center, transparent 20%, rgba(255,255,255,0.15) 70%);\n  filter: blur(5px);\n  z-index: -1;\n  pointer-events: none;\n}\n\n.ins-think-tag summary {\n  list-style: none;\n  cursor: pointer;\n  font-weight: 600;\n  color: #000 !important;\n  padding: 1px 3px;\n  margin: -1px -1px 3px -1px;\n  outline: none;\n  user-select: none;\n}\n.ins-think-tag summary::-webkit-details-marker,\n.ins-think-tag summary::marker {\n  display: none;\n}\n\n.ins-think-tag .ins-think-content {\n  margin-top: 6px;\n  font-size: 13px;\n  line-height: 1.5;\n  color: #000;\n  white-space: pre-wrap;\n  opacity: 0.9;\n  max-width: 100%;\n  word-break: break-word;\n}\n</style>",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "18a460e1-ffac-4338-9933-8b35a27a3e2f",
+        "scriptName": "3）【小说】用户消息包裹",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/(.*)/s",
+        "trimStrings": [],
+        "replaceString": "<user_input>\n$1\n</user_input>",
+        "placement": [
+            1
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 0,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "ca561805-7e0d-42a6-8015-17a47b82f3b1",
+        "scriptName": "4）【小说】隐藏小剧场",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/<godwrite>[\\s\\S]*?<\\/godwrite>/g",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "d339cbd4-2fd8-43ae-ba65-88b3f2344006",
+        "scriptName": "5）【小说】3楼外仅保留摘要",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/^[\\s\\S]*?<Godlog>([\\s\\S]*?)<\\/Godlog>[\\s\\S]*$/gm",
+        "trimStrings": [],
+        "replaceString": "$1",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": 4,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "c6671781-3263-43ab-864b-6cc8f7123b26",
+        "scriptName": "6）【小说】不发送手记（选开）",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/<details>\\s*<summary>【小说之神·剧情手记】<\\/summary>[\\s\\S]*?<\\/details>/g",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "49977a00-99a1-4f95-9252-8969a9d7365a",
+        "scriptName": "7）【小说】不发送剧情推演（选开）",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "<details>\\s*<summary[^>]*>\\s*🎬 剧情推演:[\\s\\S]*?<\\/details>",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "f4ad1478-9963-4cc6-98ab-a8d0b26a6443",
+        "scriptName": "8）【小说】不发送剧情分支（选开）",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/<details>[\\s\\S]*?剧情走向 · [\\s\\S]*?<\\/details>/g",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "58151f22-65bb-425a-a6ab-85be2850d904",
+        "scriptName": "9）【小说】[不发送]以前的用户输入（选开）",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/(.*)/s",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            1
+        ],
+        "substituteRegex": 0,
+        "minDepth": 1,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "c14a19f5-e02f-4923-9f23-032607ed4256",
+        "scriptName": "10）【小说】去除草稿",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/<!--.*?-->/gs",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": true
+    },
+    {
+        "id": "remove_all_truncation_markers",
+        "scriptName": "11）【小说】删除所有防截断标记",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/(<!-- :: OUTPUT_COMPLETE :: -->\\s*<!-- System Notice: All required content.*?-->\\s*<!-- No further tokens.*?-->\\s*<!-- Absence of this block.*?-->)|▰▰COMPLETE▰▰/gs",
+        "trimStrings": [],
+        "replaceString": "",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": false
+    },
+    {
+        "id": "1c86384b-8ab0-4029-9968-670f382e6926",
+        "scriptName": "【小说】童话状态栏（选一）",
+        "disabled": true,
+        "runOnEdit": true,
+        "findRegex": ":::newspaper\\s+(.*?)\\s*\\/\\s*(.*?)\\s*#\\s*(.*?)\\s*#\\s*(.*?)\\s*#\\s*(.*?)\\s*●\\s*(.*?)\\s*#\\s*(.*?)\\s*:::",
+        "trimStrings": [],
+        "replaceString": "<div class=\"mf-b\"><div class=\"mf-b-hd\"><span class=\"mf-b-dt\">$1</span><span class=\"mf-b-cast\">$2</span></div><div class=\"mf-b-body\"><div class=\"mf-b-title\">$3</div><div class=\"mf-b-deco\">✦ · · · ✦</div><div class=\"mf-b-quote\">$4</div></div><div class=\"mf-b-ft\"><div class=\"mf-b-cell\"><div class=\"mf-b-cl\">🗺 Location</div><div class=\"mf-b-cv\">$5</div></div><div class=\"mf-b-cell\"><div class=\"mf-b-cl\">🌤 Weather</div><div class=\"mf-b-cv\">$6</div></div><div class=\"mf-b-cell mf-b-last\"><div class=\"mf-b-cl\">👗 Costume</div><div class=\"mf-b-cv\">$7</div></div></div></div><style>@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');.mf-b{font-family:'Nunito','Noto Serif SC',sans-serif;background:#fdfbf7;border-radius:24px;overflow:hidden;border:2.5px solid #e8e0d5;box-shadow:0 0 0 5px #fdfbf7,0 0 0 8px #ede5d8,0 8px 24px rgba(180,150,110,.1)}.mf-b-hd{background:linear-gradient(120deg,#f5efe6 0%,#ede5d8 50%,#f5efe6 100%);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px dashed #ddd0be;position:relative}.mf-b-hd::before{content:'◇';position:absolute;left:50%;transform:translateX(-50%);font-size:8px;color:#c8b898;bottom:-7px;background:#ede5d8;padding:0 6px}.mf-b-dt{font-family:'Courier New',monospace;font-size:9px;color:#a08060;letter-spacing:.5px}.mf-b-cast{font-size:11px;font-weight:700;color:#7a5c3a}.mf-b-body{padding:18px 24px 10px;text-align:center}.mf-b-title{font-size:22px;font-weight:700;color:#3a2e22;letter-spacing:3px;margin-bottom:8px;text-shadow:0 1px 0 rgba(255,255,255,.8)}.mf-b-deco{color:#c8b080;font-size:11px;letter-spacing:5px;margin-bottom:8px;opacity:.7}.mf-b-quote{font-size:12px;font-style:italic;color:#7a6550;line-height:1.75;padding-bottom:12px;position:relative}.mf-b-quote::after{content:'';display:block;width:40px;height:1.5px;background:linear-gradient(90deg,transparent,#d4c4a8,transparent);margin:10px auto 0}.mf-b-ft{border-top:2px dashed #e0d5c4;display:grid;grid-template-columns:1fr 1fr 1fr;background:#faf7f2}.mf-b-cell{padding:10px 12px 12px;border-right:1.5px dashed #e0d5c4;display:flex;flex-direction:column;gap:4px}.mf-b-last{border-right:none}.mf-b-cl{font-size:9px;letter-spacing:.5px;color:#b0987a;font-weight:600;margin-bottom:2px}.mf-b-cv{font-size:11px;color:#4a3828;line-height:1.55;font-weight:400}</style>",
+        "placement": [
+            1,
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "f6b8fd53-659f-4393-b700-43e43e73735f",
+        "scriptName": "【小说】杂志状态栏（选一）",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": ":::newspaper\\s+(.*?)\\s*\\/\\s*(.*?)\\s*#\\s*(.*?)\\s*#\\s*(.*?)\\s*#\\s*(.*?)\\s*●\\s*(.*?)\\s*#\\s*(.*?)\\s*:::",
+        "trimStrings": [],
+        "replaceString": "<div class=\"mf-c\"><div class=\"mf-c-top\"><div class=\"mf-c-meta\"><span class=\"mf-c-lbl\">Date · Time</span><span class=\"mf-c-dt\">$1</span></div><div class=\"mf-c-cw\"><span class=\"mf-c-clbl\">Cast</span><span class=\"mf-c-cast\">$2</span></div></div><div class=\"mf-c-tw\"><span class=\"mf-c-num\">01</span><div class=\"mf-c-tt\"><div class=\"mf-c-title\">$3</div><div class=\"mf-c-quote\">$4</div></div></div><div class=\"mf-c-grid\"><div class=\"mf-c-cell\"><span class=\"mf-c-cl\">Location</span><span class=\"mf-c-cv\">$5</span></div><div class=\"mf-c-cell\"><span class=\"mf-c-cl\">Weather</span><span class=\"mf-c-cv\">$6</span></div><div class=\"mf-c-cell\" style=\"border-right:none\"><span class=\"mf-c-cl\">Costume</span><span class=\"mf-c-cv\">$7</span></div></div></div><style>.mf-c{background:#fafafa;border-top:2px solid #111;position:relative}.mf-c::before{content:'';position:absolute;top:0;right:0;width:4px;height:100%;background:#111}.mf-c-top{padding:11px 24px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #e8e8e8}.mf-c-meta{display:flex;flex-direction:column;gap:3px}.mf-c-lbl{font-family:'Courier New',monospace;font-size:7px;letter-spacing:3px;color:#bbb;text-transform:uppercase}.mf-c-dt{font-family:'Courier New',monospace;font-size:10px;color:#333}.mf-c-cw{text-align:right}.mf-c-clbl{font-family:'Courier New',monospace;font-size:7px;letter-spacing:3px;color:#bbb;text-transform:uppercase;display:block;margin-bottom:3px}.mf-c-cast{font-family:Georgia,'Noto Serif SC',serif;font-size:13px;font-style:italic;color:#111}.mf-c-tw{padding:14px 24px 12px;border-bottom:1px solid #e8e8e8;display:flex;align-items:flex-end;gap:16px}.mf-c-num{font-family:'Courier New',monospace;font-size:38px;color:#ececec;line-height:1;flex-shrink:0}.mf-c-tt{flex:1}.mf-c-title{font-family:Georgia,'Noto Serif SC',serif;font-size:22px;font-weight:700;color:#111;line-height:1.15}.mf-c-quote{font-family:Georgia,'Noto Serif SC',serif;font-size:12px;font-style:italic;color:#999;margin-top:4px}.mf-c-grid{display:grid;grid-template-columns:1fr 1fr 1fr}.mf-c-cell{padding:9px 24px 11px;border-right:1px solid #ececec;display:flex;flex-direction:column;gap:4px}.mf-c-cl{font-family:'Courier New',monospace;font-size:7px;letter-spacing:2.5px;color:#ccc;text-transform:uppercase}.mf-c-cv{font-family:'Noto Serif SC',Georgia,serif;font-size:11px;color:#222;line-height:1.6}</style>",
+        "placement": [
+            1,
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "935532bc-15b7-4c57-aeda-63dd59704426",
+        "scriptName": "【小说】复古状态栏（选一）",
+        "disabled": true,
+        "runOnEdit": true,
+        "findRegex": ":::newspaper\\s+(.*?)\\s*\\/\\s*(.*?)\\s*#\\s*(.*?)\\s*#\\s*(.*?)\\s*#\\s*(.*?)\\s*#\\s*(.*?)\\s*:::",
+        "trimStrings": [],
+        "replaceString": "<div class=\"mf-a\"><div class=\"mf-a-flag\"><span class=\"mf-a-date\">$1</span><span class=\"mf-a-ed\">· Scene File ·</span><span class=\"mf-a-cast\">$2</span></div><div class=\"mf-a-hl\">$3</div><div class=\"mf-a-r1\"></div><div class=\"mf-a-r2\"></div><div class=\"mf-a-sub\">$4</div><div class=\"mf-a-cols\"><div class=\"mf-a-col\"><div class=\"mf-a-cl\">Location</div><div class=\"mf-a-cv\">$5</div></div><div class=\"mf-a-col\"><div class=\"mf-a-cl\">Weather</div><div class=\"mf-a-cv\">$6</div></div><div class=\"mf-a-col\"><div class=\"mf-a-cl\">Costume</div><div class=\"mf-a-cv\">$7</div></div></div></div><style>.mf-a{background:#f7f2e8;border-top:6px solid #1c1208;border-bottom:2px solid #1c1208;font-family:Georgia,serif}.mf-a-flag{border-bottom:3px double #1c1208;padding:6px 20px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;background:#f0ead8}.mf-a-date{font-family:'Courier New',monospace;font-size:9px;color:#5a4422}.mf-a-ed{font-size:9px;color:#8b6f3a;letter-spacing:3px;text-transform:uppercase;white-space:nowrap}.mf-a-cast{font-family:'Courier New',monospace;font-size:9px;color:#5a4422;text-align:right;font-style:italic}.mf-a-hl{font-size:24px;font-weight:700;color:#0f0a04;text-align:center;padding:10px 24px 4px;letter-spacing:.5px;line-height:1.1}.mf-a-r1{height:3px;background:#1c1208;margin:4px 20px 2px}.mf-a-r2{height:1px;background:#1c1208;margin:0 20px 0}.mf-a-sub{font-style:italic;font-size:12px;color:#4a3318;text-align:center;padding:5px 24px 8px;border-bottom:1px solid #1c1208}.mf-a-cols{display:grid;grid-template-columns:1fr 1fr 1fr}.mf-a-col{padding:8px 16px 10px;position:relative}.mf-a-col:not(:last-child)::after{content:'';position:absolute;top:8px;bottom:8px;right:0;width:1px;background:repeating-linear-gradient(to bottom,#a08060 0,#a08060 3px,transparent 3px,transparent 7px)}.mf-a-cl{font-family:'Courier New',monospace;font-size:7px;letter-spacing:2px;color:#8b6f3a;text-transform:uppercase;padding-bottom:3px;border-bottom:1px solid #c8b48a;margin-bottom:4px}.mf-a-cv{font-size:11px;color:#1c1208;line-height:1.6}</style>",
+        "placement": [
+            1,
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "ffccbf6b-46fb-4ee2-bc6b-c9523a950212",
+        "scriptName": "【小说】白瓷极简摘要美化",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "<Godlog>[\\s\\S]*?<Nub>([\\s\\S]*?)<\\/Nub>[\\s\\S]*?<Title>([\\s\\S]*?)<\\/Title>[\\s\\S]*?<Time>([\\s\\S]*?)<\\/Time>[\\s\\S]*?<Pln>([\\s\\S]*?)<\\/Pln>[\\s\\S]*?<Per>([\\s\\S]*?)<\\/Per>[\\s\\S]*?<Cond>([\\s\\S]*?)<\\/Cond>[\\s\\S]*?<\\/Godlog>",
+        "trimStrings": [],
+        "replaceString": "<details class=\"ce-wave\"><summary class=\"ce-header\"><span class=\"ce-line ce-lineL\"></span><span class=\"ce-title\">$2</span><span class=\"ce-line ce-lineR\"></span><span class=\"ce-arrow\">+</span></summary><div class=\"ce-body\"><div class=\"ce-meta\"><div class=\"ce-row\"><span class=\"ce-tag\">$1</span><span class=\"ce-per\">$5</span></div><div class=\"ce-row\"><span class=\"ce-time\">$3</span><span class=\"ce-place\">$4</span></div></div><div class=\"ce-quote\">$6</div><div class=\"ce-deco\"><span class=\"ce-d1\"></span><span class=\"ce-d2\"></span><span class=\"ce-d3\"></span></div></div></details><style>.ce-wave{font-family:'Noto Serif SC',Georgia,serif;margin:20px 0;background:#fefefe;border-top:1px solid #222;border-bottom:1px solid #ddd;position:relative}.ce-header{list-style:none;cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:14px;position:relative;transition:background .25s}.ce-header::-webkit-details-marker{display:none}.ce-header:hover{background:rgba(0,0,0,.02)}.ce-line{height:1px;background:linear-gradient(90deg,transparent,#ccc);flex:1;transition:all .3s}.ce-lineR{background:linear-gradient(90deg,#ccc,transparent)}.ce-wave[open] .ce-line{background:linear-gradient(90deg,transparent,#999)}.ce-wave[open] .ce-lineR{background:linear-gradient(90deg,#999,transparent)}.ce-title{font-size:18px;font-weight:400;color:#111;letter-spacing:5px;white-space:nowrap;flex-shrink:0}.ce-arrow{position:absolute;right:16px;font-size:14px;color:#bbb;transition:transform .3s cubic-bezier(.34,1.56,.64,1);font-weight:300}.ce-wave[open] .ce-arrow{transform:rotate(45deg);color:#888}.ce-body{padding:18px 24px 22px;border-top:1px solid #f0f0f0;animation:ceIn .4s cubic-bezier(.22,1,.36,1)}@keyframes ceIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.ce-meta{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:16px}.ce-row{display:contents}.ce-tag{font-family:'Courier New',monospace;font-size:9px;letter-spacing:2px;color:#aaa;text-transform:uppercase;padding:4px 0;border-bottom:1px solid #f5f5f5}.ce-per{font-size:11px;color:#444;text-align:right;padding:4px 0;border-bottom:1px solid #f5f5f5}.ce-time{font-size:11px;color:#888;padding:4px 0}.ce-place{font-size:11px;color:#888;text-align:right;padding:4px 0}.ce-quote{font-size:15px;line-height:2;font-style:italic;text-align:center;color:#333;padding:20px 10px;margin:10px 0;position:relative}.ce-quote::before{content:'\\201C';font-family:Georgia,serif;font-size:48px;color:#f0f0f0;position:absolute;top:4px;left:8px;line-height:1;font-style:normal}.ce-quote::after{content:'\\201D';font-family:Georgia,serif;font-size:48px;color:#f0f0f0;position:absolute;bottom:-10px;right:8px;line-height:1;font-style:normal}.ce-deco{display:flex;justify-content:center;gap:6px;margin-top:14px}.ce-d1,.ce-d3{width:40px;height:1px;background:#e8e8e8}.ce-d2{width:6px;height:6px;border:1px solid #e0e0e0;transform:rotate(45deg)}</style>",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "1def45db-1eb9-4e66-ae93-0e13232c0930",
+        "scriptName": "【小说】可爱糖果摘要美化",
+        "disabled": true,
+        "runOnEdit": true,
+        "findRegex": "<Godlog>[\\s\\S]*?<Nub>([\\s\\S]*?)<\\/Nub>[\\s\\S]*?<Title>([\\s\\S]*?)<\\/Title>[\\s\\S]*?<Time>([\\s\\S]*?)<\\/Time>[\\s\\S]*?<Pln>([\\s\\S]*?)<\\/Pln>[\\s\\S]*?<Per>([\\s\\S]*?)<\\/Per>[\\s\\S]*?<Cond>([\\s\\S]*?)<\\/Cond>[\\s\\S]*?<\\/Godlog>",
+        "trimStrings": [],
+        "replaceString": "<details class=\"candy-wave\"><summary class=\"candy-header\"><span class=\"candy-dot candy-dotL\">✿</span><span class=\"candy-title\">$2</span><span class=\"candy-dot candy-dotR\">✿</span><span class=\"candy-arrow\">▾</span></summary><div class=\"candy-body\"><div class=\"candy-chips\"><span class=\"candy-chip chip-nub\">✦ $1</span><span class=\"candy-chip chip-per\">$5</span><span class=\"candy-chip chip-time\">⏱ $3</span><span class=\"candy-chip chip-place\">📍 $4</span></div><div class=\"candy-quote\">$6</div><div class=\"candy-deco\"><span class=\"candy-star\">★</span><span class=\"candy-star\" style=\"animation-delay:.3s\">★</span><span class=\"candy-star\" style=\"animation-delay:.6s\">★</span></div></div></details><style>.candy-wave{font-family:'Noto Serif SC','Hiragino Kaku Gothic Pro',sans-serif;margin:20px 0;background:linear-gradient(160deg,#fff8fc 0%,#fef0f8 100%);border-radius:16px;border:2px solid #f4c0dc;overflow:hidden;box-shadow:0 4px 16px rgba(240,150,190,.15)}.candy-header{list-style:none;cursor:pointer;padding:13px 20px;display:flex;align-items:center;justify-content:center;gap:12px;position:relative;background:linear-gradient(90deg,#fde8f4,#fdf0f8,#fde8f4);border-bottom:1.5px dashed #f4c0dc;transition:opacity .2s}.candy-header::-webkit-details-marker{display:none}.candy-header:hover{opacity:.9}.candy-dot{font-size:14px;color:#e88ab0;animation:candySpin 6s linear infinite}.candy-dotR{animation-direction:reverse}.candy-title{font-size:18px;font-weight:600;color:#c05880;letter-spacing:4px}.candy-arrow{position:absolute;right:18px;font-size:10px;color:#e88ab0;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}.candy-wave[open] .candy-arrow{transform:rotate(180deg)}.candy-body{padding:16px 20px 18px;animation:candyPop .35s cubic-bezier(.34,1.56,.64,1)}@keyframes candyPop{from{opacity:0;transform:scale(.97) translateY(6px)}to{opacity:1;transform:scale(1) translateY(0)}}@keyframes candySpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.candy-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}.candy-chip{font-size:10px;padding:3px 10px;border-radius:20px;letter-spacing:.5px}.chip-nub{background:#fde0ee;color:#c05880;border:1px solid #f4b8d4}.chip-per{background:#e8f0ff;color:#5870c0;border:1px solid #b8c8f4}.chip-time{background:#f0fde0;color:#608058;border:1px solid #c4e8b0}.chip-place{background:#fff8e0;color:#907030;border:1px solid #f0d890}.candy-quote{font-size:14.5px;line-height:1.95;text-align:center;color:#7a3050;padding:14px 14px;background:rgba(255,220,240,.25);border-radius:12px;border:1px solid rgba(240,160,200,.3);margin:4px 0 12px;position:relative}.candy-quote::before{content:'❝';position:absolute;top:-8px;left:14px;font-size:22px;color:rgba(230,130,170,.4);line-height:1}.candy-deco{display:flex;justify-content:center;gap:10px}.candy-star{color:#f4b0d0;font-size:10px;animation:candyBlink 2s ease-in-out infinite}@keyframes candyBlink{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}</style>",
+        "placement": [
+            1,
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "1a664010-8521-487a-86fe-6079545fa182",
+        "scriptName": "【小说】墨染水彩摘要美化",
+        "disabled": true,
+        "runOnEdit": true,
+        "findRegex": "<Godlog>[\\s\\S]*?<Nub>([\\s\\S]*?)<\\/Nub>[\\s\\S]*?<Title>([\\s\\S]*?)<\\/Title>[\\s\\S]*?<Time>([\\s\\S]*?)<\\/Time>[\\s\\S]*?<Pln>([\\s\\S]*?)<\\/Pln>[\\s\\S]*?<Per>([\\s\\S]*?)<\\/Per>[\\s\\S]*?<Cond>([\\s\\S]*?)<\\/Cond>[\\s\\S]*?<\\/Godlog>",
+        "trimStrings": [],
+        "replaceString": "<details class=\"ink-wave\"><summary class=\"ink-header\"><span class=\"ink-ornL\">—◈—</span><span class=\"ink-title\">$2</span><span class=\"ink-ornR\">—◈—</span><span class=\"ink-arrow\">▾</span></summary><div class=\"ink-body\"><div class=\"ink-meta\"><div class=\"ink-row\"><span class=\"ink-tag\">No.$1</span><span class=\"ink-per\">$5</span></div><div class=\"ink-row\"><span class=\"ink-time\">$3</span><span class=\"ink-place\">$4</span></div></div><div class=\"ink-quote\">\"&thinsp;$6&thinsp;\"</div><div class=\"ink-deco\"><span class=\"ink-dot\"></span><span class=\"ink-dline\"></span><span class=\"ink-dot\"></span><span class=\"ink-dline\"></span><span class=\"ink-dot\"></span></div></div></details><style>.ink-wave{font-family:'Noto Serif SC','Yu Mincho',Georgia,serif;margin:20px 0;background:linear-gradient(135deg,#fdf8f0 0%,#f8f2e4 100%);border:none;border-left:3px solid #2c1a0e;position:relative;overflow:hidden}.ink-wave::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#8b6040,#c8a060,#8b6040,transparent)}.ink-wave::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#8b6040,#c8a060,#8b6040,transparent)}.ink-header{list-style:none;cursor:pointer;padding:14px 22px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative;transition:background .3s}.ink-header::-webkit-details-marker{display:none}.ink-header:hover{background:rgba(139,96,64,.06)}.ink-ornL,.ink-ornR{font-size:11px;color:#c8a060;letter-spacing:2px;opacity:.7;flex-shrink:0}.ink-title{font-size:20px;font-weight:600;color:#1a0e04;letter-spacing:5px}.ink-arrow{position:absolute;right:20px;font-size:10px;color:#c8a060;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}.ink-wave[open] .ink-arrow{transform:rotate(180deg)}.ink-body{padding:20px 28px 22px;border-top:1px dashed rgba(139,96,64,.3);animation:inkRise .4s cubic-bezier(.22,1,.36,1)}@keyframes inkRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.ink-meta{margin-bottom:18px;padding-left:16px;border-left:2px solid rgba(200,160,96,.5)}.ink-row{display:flex;justify-content:space-between;font-size:12px;color:#5a3a1a;margin-bottom:7px;opacity:.85}.ink-tag{font-family:'Courier New',monospace;font-size:10px;color:#c8a060;letter-spacing:1px}.ink-quote{font-size:16px;line-height:1.9;font-style:italic;text-align:center;color:#2c1a0e;margin:20px 0;padding:18px 16px;background:rgba(200,160,96,.06);border-top:1px solid rgba(200,160,96,.3);border-bottom:1px solid rgba(200,160,96,.3);position:relative}.ink-quote::before{content:'\\201C';position:absolute;top:-14px;left:20px;font-size:40px;color:rgba(200,160,96,.2);font-family:Georgia,serif;line-height:1}.ink-deco{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px}.ink-dot{width:4px;height:4px;border-radius:50%;background:#c8a060;opacity:.4}.ink-dline{width:32px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,160,96,.4),transparent)}</style>",
+        "placement": [
+            1,
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "0dfdcafc-836d-4a90-9737-2a05ae9e82c0",
+        "scriptName": "【小说】杂志剧情分支",
+        "disabled": true,
+        "runOnEdit": true,
+        "findRegex": "<text>[\\s\\S]*?1\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?2\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?3\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?4\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?5\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?<\\/text>",
+        "trimStrings": [],
+        "replaceString": "```\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Branch Selector</title>\n<style>\n* { box-sizing: border-box; margin: 0; padding: 0; }\nbody {\n  font-family: 'Georgia', 'Noto Serif SC', serif;\n  background: transparent;\n  padding: 12px;\n  font-size: 14px;\n}\n\n/* 整体容器 */\n.panel {\n  background: #fff;\n  border: 1px solid #e0e0e0;\n}\n\n/* 顶部masthead */\n.masthead {\n  padding: 8px 14px 7px;\n  border-bottom: 3px double #111;\n  display: flex;\n  align-items: baseline;\n  justify-content: space-between;\n}\n.masthead-title {\n  font-family: 'Courier New', monospace;\n  font-size: 7.5px;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  color: #888;\n}\n.masthead-rule {\n  flex: 1;\n  height: 1px;\n  background: #ddd;\n  margin: 0 12px;\n  position: relative;\n  top: -2px;\n}\n.masthead-count {\n  font-family: 'Courier New', monospace;\n  font-size: 7.5px;\n  color: #ccc;\n  letter-spacing: 1px;\n}\n\n/* 选项列表 */\n.option-list {\n  list-style: none;\n}\n\n.option-item {\n  display: grid;\n  grid-template-columns: 44px 1fr;\n  border-bottom: 1px solid #f0f0f0;\n  cursor: pointer;\n  transition: background .14s;\n  position: relative;\n}\n.option-item:last-child { border-bottom: none; }\n.option-item:hover { background: #fafafa; }\n.option-item.selected { background: #f5f5f5; }\n\n/* 大号编号 */\n.opt-num {\n  font-family: 'Georgia', serif;\n  font-size: 28px;\n  font-weight: 700;\n  color: #ebebeb;\n  line-height: 1;\n  padding: 10px 0 10px 14px;\n  display: flex;\n  align-items: center;\n  transition: color .14s;\n  user-select: none;\n  letter-spacing: -1px;\n}\n.option-item:hover .opt-num { color: #d8d8d8; }\n.option-item.selected .opt-num { color: #111; }\n\n/* 文字区 */\n.opt-body {\n  padding: 10px 14px 10px 8px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  border-left: 1px solid #f0f0f0;\n  gap: 2px;\n}\n.opt-text {\n  font-size: 12.5px;\n  color: #444;\n  line-height: 1.5;\n  transition: color .14s;\n}\n.option-item:hover .opt-text { color: #111; }\n.option-item.selected .opt-text { color: #111; font-weight: 500; }\n\n.opt-tag {\n  font-family: 'Courier New', monospace;\n  font-size: 8px;\n  letter-spacing: 2px;\n  color: #ccc;\n  text-transform: uppercase;\n  transition: color .14s;\n}\n.option-item.selected .opt-tag { color: #999; }\n\n/* 选中时左侧黑条 */\n.option-item::before {\n  content: '';\n  position: absolute;\n  left: 0; top: 0; bottom: 0;\n  width: 0;\n  background: #111;\n  transition: width .16s cubic-bezier(.22,1,.36,1);\n}\n.option-item.selected::before { width: 3px; }\n\n/* 底部 display */\n.display {\n  padding: 9px 14px 10px;\n  border-top: 1px solid #e8e8e8;\n  background: #fafafa;\n  display: grid;\n  grid-template-columns: 8px 1fr;\n  gap: 10px;\n  align-items: start;\n  min-height: 18px;\n}\n.display-dot {\n  width: 6px; height: 6px;\n  border-radius: 50%;\n  border: 1.5px solid #ccc;\n  margin-top: 4px;\n  flex-shrink: 0;\n  transition: all .2s;\n}\n.display.active .display-dot {\n  background: #111;\n  border-color: #111;\n}\n.display-text {\n  font-family: 'Georgia', serif;\n  font-size: 11.5px;\n  color: #bbb;\n  font-style: italic;\n  line-height: 1.5;\n  transition: color .2s;\n}\n.display.active .display-text {\n  color: #333;\n  font-style: normal;\n}\n</style>\n</head>\n<body>\n<div class=\"panel\">\n  <div class=\"masthead\">\n    <span class=\"masthead-title\">Branch Selection</span>\n    <span class=\"masthead-rule\"></span>\n    <span class=\"masthead-count\">Vol.05</span>\n  </div>\n  <ul class=\"option-list\">\n    <li class=\"option-item\" onclick=\"pick(this,'$1')\">\n      <span class=\"opt-num\">01</span>\n      <div class=\"opt-body\"><span class=\"opt-tag\">Path A</span><span class=\"opt-text\">$1</span></div>\n    </li>\n    <li class=\"option-item\" onclick=\"pick(this,'$2')\">\n      <span class=\"opt-num\">02</span>\n      <div class=\"opt-body\"><span class=\"opt-tag\">Path B</span><span class=\"opt-text\">$2</span></div>\n    </li>\n    <li class=\"option-item\" onclick=\"pick(this,'$3')\">\n      <span class=\"opt-num\">03</span>\n      <div class=\"opt-body\"><span class=\"opt-tag\">Path C</span><span class=\"opt-text\">$3</span></div>\n    </li>\n    <li class=\"option-item\" onclick=\"pick(this,'$4')\">\n      <span class=\"opt-num\">04</span>\n      <div class=\"opt-body\"><span class=\"opt-tag\">Path D</span><span class=\"opt-text\">$4</span></div>\n    </li>\n    <li class=\"option-item\" onclick=\"pick(this,'$5')\">\n      <span class=\"opt-num\">05</span>\n      <div class=\"opt-body\"><span class=\"opt-tag\">Path E</span><span class=\"opt-text\">$5</span></div>\n    </li>\n  </ul>\n  <div class=\"display\" id=\"display\">\n    <span class=\"display-dot\"></span>\n    <span class=\"display-text\" id=\"display-text\">未选择</span>\n  </div>\n</div>\n<script>\nlet last = null;\nfunction pick(el, txt) {\n  last?.classList.remove('selected');\n  el.classList.add('selected');\n  last = el;\n  document.getElementById('display-text').innerText = txt;\n  document.getElementById('display').classList.add('active');\n  try {\n    const ta = window.parent.document.querySelector('#send_textarea');\n    if (!ta) return;\n    ta.value = txt;\n    ta.dispatchEvent(new Event('input', { bubbles: true }));\n  } catch(e) {}\n}\n</script>\n</body>\n</html>\n```",
+        "placement": [
+            1,
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "eb47a77e-fd8f-4235-b6f3-cbcc2c04d7db",
+        "scriptName": "【小说】简约系剧情分支",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "<text>[\\s\\S]*?1\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?2\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?3\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?4\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?5\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?<\\/text>",
+        "trimStrings": [],
+        "replaceString": "```\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Branch Selector</title>\n<style>\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  padding: 14px;\n  font-family: inherit;\n  background: transparent;\n  font-size: 14px;\n}\n.panel {\n  background: #fafafa;\n  border-top: 2px solid #111;\n  border-bottom: 1px solid #e0e0e0;\n  padding: 14px 0 0;\n}\n.header {\n  font-family: 'Courier New', monospace;\n  font-size: 8px;\n  letter-spacing: 3px;\n  text-transform: uppercase;\n  color: #bbb;\n  margin-bottom: 10px;\n  padding: 0 18px;\n}\n.option-list {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n.option-item {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 9px 18px;\n  cursor: pointer;\n  border-left: 2px solid transparent;\n  transition: all .18s;\n  color: #555;\n  font-size: 13px;\n  line-height: 1.4;\n}\n.option-item:hover {\n  border-left-color: #ccc;\n  background: #f5f5f5;\n  color: #111;\n}\n.option-item.selected {\n  border-left-color: #111;\n  background: #f0f0f0;\n  color: #111;\n}\n.opt-arrow {\n  font-size: 11px;\n  color: #ccc;\n  opacity: 0;\n  transition: opacity .18s, transform .18s;\n  transform: translateX(-4px);\n  flex-shrink: 0;\n  margin-left: 10px;\n}\n.option-item:hover .opt-arrow,\n.option-item.selected .opt-arrow {\n  opacity: 1;\n  transform: translateX(0);\n  color: #999;\n}\n.display {\n  margin: 10px 18px 14px;\n  padding: 8px 12px;\n  border-left: 2px solid #e8e8e8;\n  font-size: 12px;\n  color: #aaa;\n  min-height: 18px;\n  font-style: italic;\n  transition: all .2s;\n}\n.display.active {\n  border-left-color: #111;\n  color: #444;\n  font-style: normal;\n}\n</style>\n</head>\n<body>\n<div class=\"panel\">\n  <div class=\"header\">Branch Selection</div>\n  <ul class=\"option-list\">\n    <li class=\"option-item\" onclick=\"pick(this,'$1')\"><span>$1</span><span class=\"opt-arrow\">→</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$2')\"><span>$2</span><span class=\"opt-arrow\">→</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$3')\"><span>$3</span><span class=\"opt-arrow\">→</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$4')\"><span>$4</span><span class=\"opt-arrow\">→</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$5')\"><span>$5</span><span class=\"opt-arrow\">→</span></li>\n  </ul>\n  <div class=\"display\" id=\"display\">未选择</div>\n</div>\n<script>\nlet last = null;\nfunction pick(el, txt) {\n  last?.classList.remove('selected');\n  el.classList.add('selected');\n  last = el;\n  const d = document.getElementById('display');\n  d.innerText = txt;\n  d.classList.add('active');\n  try {\n    const ta = window.parent.document.querySelector('#send_textarea');\n    if (!ta) return;\n    ta.value = txt;\n    ta.dispatchEvent(new Event('input', { bubbles: true }));\n  } catch(e) {}\n}\n</script>\n</body>\n</html>\n```",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "5c7aa955-e0b3-4f3b-bef7-095adb1a8d45",
+        "scriptName": "【小说】可爱系剧情分支",
+        "disabled": true,
+        "runOnEdit": true,
+        "findRegex": "<text>[\\s\\S]*?1\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?2\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?3\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?4\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?5\\.\\{\\{\\{\\{([\\s\\S]*?)\\}\\}\\}\\}[\\s\\S]*?<\\/text>",
+        "trimStrings": [],
+        "replaceString": "```\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Branch Selector</title>\n<style>\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  padding: 14px;\n  font-family: inherit;\n  background: transparent;\n  font-size: 14px;\n}\n.panel {\n  background: linear-gradient(160deg, #fff8fc, #fef2fa);\n  border: 2px solid #f0c0dc;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 20px rgba(240,150,190,.15);\n}\n.header {\n  background: linear-gradient(90deg, #fde4f2, #fdf0fa, #fde4f2);\n  padding: 11px 16px;\n  text-align: center;\n  font-size: 12px;\n  font-weight: 600;\n  color: #c05880;\n  letter-spacing: 3px;\n  border-bottom: 1.5px dashed #f4c0dc;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n}\n.header-star {\n  color: #e8a0c0;\n  display: inline-block;\n  animation: spin 4s linear infinite;\n  font-size: 13px;\n}\n@keyframes spin { from { transform: rotate(0) } to { transform: rotate(360deg) } }\n.option-list {\n  list-style: none;\n  padding: 10px 12px;\n  margin: 0;\n  display: flex;\n  flex-direction: column;\n  gap: 7px;\n}\n.option-item {\n  display: flex;\n  align-items: center;\n  gap: 11px;\n  padding: 9px 13px;\n  border-radius: 12px;\n  cursor: pointer;\n  border: 1.5px solid transparent;\n  transition: all .2s cubic-bezier(.34,1.56,.64,1);\n  color: #7a3858;\n  background: rgba(255,255,255,.6);\n  font-size: 13px;\n  line-height: 1.4;\n}\n.option-item:hover {\n  border-color: #f0b0d0;\n  background: #fff0f8;\n  transform: scale(1.02);\n}\n.option-item.selected {\n  border-color: #e880b8;\n  background: linear-gradient(135deg, #fff0f8, #ffe8f4);\n  box-shadow: 0 3px 12px rgba(240,130,180,.2);\n}\n.opt-badge {\n  width: 22px;\n  height: 22px;\n  border-radius: 50%;\n  background: linear-gradient(135deg, #f4c0dc, #e890c0);\n  color: #fff;\n  font-size: 10px;\n  font-weight: 700;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  transition: transform .2s;\n}\n.option-item.selected .opt-badge {\n  transform: scale(1.15);\n  background: linear-gradient(135deg, #e870b0, #d04090);\n}\n.display {\n  margin: 0 14px 14px;\n  padding: 10px 14px;\n  background: rgba(255,220,240,.3);\n  border-radius: 12px;\n  border: 1px solid rgba(240,160,200,.4);\n  font-size: 12px;\n  color: #c090a8;\n  text-align: center;\n  min-height: 18px;\n  font-style: italic;\n  transition: all .25s;\n}\n.display.active {\n  font-style: normal;\n  color: #903060;\n  background: rgba(255,200,230,.4);\n}\n</style>\n</head>\n<body>\n<div class=\"panel\">\n  <div class=\"header\">\n    <span class=\"header-star\">✦</span>\n    选择你的故事\n    <span class=\"header-star\" style=\"animation-direction:reverse\">✦</span>\n  </div>\n  <ul class=\"option-list\">\n    <li class=\"option-item\" onclick=\"pick(this,'$1')\"><span class=\"opt-badge\">A</span><span>$1</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$2')\"><span class=\"opt-badge\">B</span><span>$2</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$3')\"><span class=\"opt-badge\">C</span><span>$3</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$4')\"><span class=\"opt-badge\">D</span><span>$4</span></li>\n    <li class=\"option-item\" onclick=\"pick(this,'$5')\"><span class=\"opt-badge\">E</span><span>$5</span></li>\n  </ul>\n  <div class=\"display\" id=\"display\">✧ 点击选择 ✧</div>\n</div>\n<script>\nlet last = null;\nfunction pick(el, txt) {\n  last?.classList.remove('selected');\n  el.classList.add('selected');\n  last = el;\n  const d = document.getElementById('display');\n  d.innerText = txt;\n  d.classList.add('active');\n  try {\n    const ta = window.parent.document.querySelector('#send_textarea');\n    if (!ta) return;\n    ta.value = txt;\n    ta.dispatchEvent(new Event('input', { bubbles: true }));\n  } catch(e) {}\n}\n</script>\n</body>\n</html>\n```",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    }
+]

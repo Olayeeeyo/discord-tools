@@ -1,0 +1,222 @@
+﻿{
+    "sheet_PsycheConcepts": {
+        "uid": "sheet_PsycheConcepts",
+        "name": "心理分析概念库",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "skipTop": false,
+            "alternateLevel": "0",
+            "selectedCustomStyleKey": "自定义样式",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1"
+                }
+            }
+        },
+        "sourceData": {
+            "note": "记录用户已掌握的心理分析核心概念，只记录经过讲授和考核的术语。",
+            "initNode": "",
+            "deleteNode": "当一个学派的学习结束且用户进入下一学派时，精简该区域条目，仅保留核心支柱概念。删除细枝末节或未内化的碎片知识。",
+            "updateNode": "当用户对某概念的理解深化时更新笔记。",
+            "insertNode": "当用户首次习得新概念并通过理解验证时。"
+        },
+        "content": [
+            [
+                null,
+                "概念/术语 (Concept)",
+                "学派/来源 (School)",
+                "掌握笔记 (Note)"
+            ],
+            [
+                "",
+                "示例：Unconscious/潜意识",
+                "弗洛伊德/精神分析基础",
+                "心智的冰山模型底层，储存被压抑的欲望、记忆与冲动。不可直接进入，只能通过梦、口误、自由联想等途径推断。"
+            ]
+        ]
+    },
+    "sheet_PsycheSchools": {
+        "uid": "sheet_PsycheSchools",
+        "name": "学派谱系与里程碑",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "alternateLevel": 0,
+            "skipTop": false,
+            "selectedCustomStyleKey": "",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1",
+                    "replaceDivide": ""
+                }
+            }
+        },
+        "sourceData": {
+            "note": "【宏观学习档案】记录已完成的学派学习周期。归档并压缩历史信息，保留学派核心与用户成就。当一个学派的核心内容学习完毕时触发。",
+            "initNode": "",
+            "deleteNode": "极少删除，除非是重大理解修正。",
+            "updateNode": "当用户后续学习补充了对该学派的新理解时。",
+            "insertNode": "当一个学派的学习周期完成时。"
+        },
+        "content": [
+            [
+                null,
+                "学派/人物",
+                "时间/背景",
+                "核心理论框架",
+                "学习成就与评级"
+            ],
+            [
+                "",
+                "示例：Freud/弗洛伊德经典精神分析",
+                "1890s-1939/维也纳",
+                "地形学模型→结构模型→驱力理论→防御机制→移情理论→梦的工作。核心方法：自由联想/梦的解析/口误分析。",
+                "待完成"
+            ]
+        ]
+    },
+    "sheet_PsycheCases": {
+        "uid": "sheet_PsycheCases",
+        "name": "案例学习记录",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "alternateLevel": 0,
+            "skipTop": false,
+            "selectedCustomStyleKey": "",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1",
+                    "replaceDivide": ""
+                }
+            }
+        },
+        "sourceData": {
+            "note": "【案例分析记录】记录用户参与的案例沉浸与分析练习。追踪实践能力发展，记录关键洞察时刻。",
+            "initNode": "",
+            "deleteNode": "当案例被合并入学派谱系与里程碑后。",
+            "updateNode": "当案例分析有新的理解补充时。",
+            "insertNode": "每当完成一个案例沉浸或分析练习时。"
+        },
+        "content": [
+            [
+                null,
+                "案例名称",
+                "涉及概念",
+                "用户诠释表现",
+                "Psyche评语/评级"
+            ],
+            [
+                "",
+                "示例：安娜·O (Bertha Pappenheim)",
+                "歇斯底里/宣泄法/谈话治疗起源",
+                "识别了症状的象征意义，但未能完整推断移情动力。",
+                "B+级/需加强移情概念应用"
+            ]
+        ]
+    },
+    "sheet_PsycheDefenses": {
+        "uid": "sheet_PsycheDefenses",
+        "name": "防御机制图谱",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "alternateLevel": 0,
+            "skipTop": false,
+            "selectedCustomStyleKey": "",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1",
+                    "replaceDivide": ""
+                }
+            }
+        },
+        "sourceData": {
+            "note": "【专题图谱】记录用户已掌握的防御机制，按成熟度分层。这是心理分析的核心工具箱。",
+            "initNode": "",
+            "deleteNode": "极少删除。",
+            "updateNode": "当用户对某防御机制的识别能力提升时。",
+            "insertNode": "当用户首次习得并能正确识别某防御机制时。"
+        },
+        "content": [
+            [
+                null,
+                "防御机制",
+                "成熟度层级",
+                "定义",
+                "识别案例"
+            ],
+            [
+                "",
+                "示例：Projection/投射",
+                "不成熟防御",
+                "将自己不可接受的冲动归咎于他人。",
+                "待添加实际识别案例"
+            ],
+            [
+                "",
+                "示例：Sublimation/升华",
+                "成熟防御",
+                "将不可接受的冲动转化为社会可接受的活动。",
+                "待添加实际识别案例"
+            ]
+        ]
+    },
+    "mate": {
+        "type": "chatSheets",
+        "version": 1
+    }
+}

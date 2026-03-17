@@ -1,0 +1,339 @@
+{
+  "thinking_framework": {
+    "name": "思维框架",
+    "count": 19,
+    "presets": [
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260126_🌟 Philosophia 预设  The Wisdom Preset",
+        "techniques": [
+          "===👑 主要功能===",
+          "👑 主指令",
+          "👑 主指令"
+        ]
+      },
+      {
+        "source": "20260130_猫箱版-短回预设(更贴wow，如果你玩过的话🤔)",
+        "techniques": [
+          "Main Prompt",
+          "过家家",
+          "Lorebook Before"
+        ]
+      }
+    ]
+  },
+  "character_building": {
+    "name": "角色构建",
+    "count": 24,
+    "presets": [
+      {
+        "source": "20260118_【万象预设】【主打 模块化ai思维链控制（可按照喜好调整ai叙事节奏）+角色塑造（撒娇嘴硬小心思）】",
+        "techniques": [
+          "🔸万象",
+          "🔸防标记（防429）",
+          "🔹正文字数"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260126_🌟 Philosophia 预设  The Wisdom Preset",
+        "techniques": [
+          "===👑 主要功能===",
+          "👑 主指令",
+          "👑 主指令"
+        ]
+      }
+    ]
+  },
+  "writing_style": {
+    "name": "文风控制",
+    "count": 23,
+    "presets": [
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260126_🌟 Philosophia 预设  The Wisdom Preset",
+        "techniques": [
+          "===👑 主要功能===",
+          "👑 主指令",
+          "👑 主指令"
+        ]
+      },
+      {
+        "source": "20260130_猫箱版-短回预设(更贴wow，如果你玩过的话🤔)",
+        "techniques": [
+          "Main Prompt",
+          "过家家",
+          "Lorebook Before"
+        ]
+      }
+    ]
+  },
+  "scene_construction": {
+    "name": "场景构建",
+    "count": 0,
+    "presets": []
+  },
+  "dialogue_design": {
+    "name": "对话设计",
+    "count": 0,
+    "presets": []
+  },
+  "emotion_expression": {
+    "name": "情感表达",
+    "count": 0,
+    "presets": []
+  },
+  "nsfw_crafting": {
+    "name": "NSFW构建",
+    "count": 24,
+    "presets": [
+      {
+        "source": "20260118_【万象预设】【主打 模块化ai思维链控制（可按照喜好调整ai叙事节奏）+角色塑造（撒娇嘴硬小心思）】",
+        "techniques": [
+          "🔸万象",
+          "🔸防标记（防429）",
+          "🔹正文字数"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260126_🌟 Philosophia 预设  The Wisdom Preset",
+        "techniques": [
+          "===👑 主要功能===",
+          "👑 主指令",
+          "👑 主指令"
+        ]
+      }
+    ]
+  },
+  "constraint_mechanism": {
+    "name": "约束机制",
+    "count": 24,
+    "presets": [
+      {
+        "source": "20260118_【万象预设】【主打 模块化ai思维链控制（可按照喜好调整ai叙事节奏）+角色塑造（撒娇嘴硬小心思）】",
+        "techniques": [
+          "🔸万象",
+          "🔸防标记（防429）",
+          "🔹正文字数"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260121_【22】",
+        "techniques": [
+          "辅助提示词",
+          "主要提示词",
+          "对话示例"
+        ]
+      },
+      {
+        "source": "20260126_🌟 Philosophia 预设  The Wisdom Preset",
+        "techniques": [
+          "===👑 主要功能===",
+          "👑 主指令",
+          "👑 主指令"
+        ]
+      }
+    ]
+  },
+  "quality_control": {
+    "name": "质量控制",
+    "count": 11,
+    "presets": [
+      {
+        "source": "20260126_🌟 Philosophia 预设  The Wisdom Preset",
+        "techniques": [
+          "===👑 主要功能===",
+          "👑 主指令",
+          "👑 主指令"
+        ]
+      },
+      {
+        "source": "20260211_艾丽丝预设",
+        "techniques": [
+          "＊＊＊思维链＊＊",
+          "预设词典总目录",
+          "1.0＊ ＊＊＊叙事与描写规范"
+        ]
+      },
+      {
+        "source": "20260219_🚧🥣【SheikL文風特化預設】基於漏斗砂濾1.13版搭的新架構預設 料碟 預設【作者手寫語料】【半成品】【新破限】🚧",
+        "techniques": [
+          "主破限",
+          "SheikL宣誓(舊破限)",
+          "童年 1.1（破銅甲、近倫）"
+        ]
+      },
+      {
+        "source": "20260226_【恒ᆞ序 ᕮᑕᒪIᑭTIᑕᗩ】gemini3.0＆3.1预设总量4-5ktoken创造性低约束思维链巨长无性向",
+        "techniques": [
+          "─ 基本信息 ─",
+          "预设名_恒·序",
+          "作者_噤蝉若寒"
+        ]
+      },
+      {
+        "source": "20260305_3.15更新移花接木【女本位】GeminiV1.53及【全性向1.3】版本适配3.1抓人设深度草稿cot",
+        "techniques": [
+          "✧顶部越狱",
+          "✧重置政策（上面破不了再开）",
+          "📖 God of Novel · Core Identity"
+        ]
+      }
+    ]
+  },
+  "creative_technique": {
+    "name": "创意技法",
+    "count": 16,
+    "presets": [
+      {
+        "source": "20260126_🌟 Philosophia 预设  The Wisdom Preset",
+        "techniques": [
+          "===👑 主要功能===",
+          "👑 主指令",
+          "👑 主指令"
+        ]
+      },
+      {
+        "source": "20260130_猫箱版-短回预设(更贴wow，如果你玩过的话🤔)",
+        "techniques": [
+          "Main Prompt",
+          "过家家",
+          "Lorebook Before"
+        ]
+      },
+      {
+        "source": "20260211_艾丽丝预设",
+        "techniques": [
+          "＊＊＊思维链＊＊",
+          "预设词典总目录",
+          "1.0＊ ＊＊＊叙事与描写规范"
+        ]
+      },
+      {
+        "source": "20260214_Mina_V1.4_alpha",
+        "techniques": [
+          "🔒😺🌸Mina变量",
+          "Auxiliary Prompt",
+          "Chat Examples"
+        ]
+      },
+      {
+        "source": "20260216_[03.14超小更新]已适配Gemini3.1 细腻情感、细腻角色与独立人格[魔法小狗的梦境]",
+        "techniques": [
+          "使用手册",
+          "声明",
+          "🐶破甲🐶"
+        ]
+      }
+    ]
+  }
+}

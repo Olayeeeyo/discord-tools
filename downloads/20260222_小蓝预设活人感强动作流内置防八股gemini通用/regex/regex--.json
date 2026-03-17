@@ -1,0 +1,17 @@
+{
+    "id": "22278855-1f9d-406b-9ce5-29d87a3bea84",
+    "scriptName": "去除-",
+    "findRegex": "/-/gs",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

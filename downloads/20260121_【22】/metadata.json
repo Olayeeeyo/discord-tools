@@ -1,0 +1,41 @@
+{
+  "thread_id": "1463413594015268957",
+  "thread_name": "【2/2】",
+  "created_at": "2026-01-21T06:03:09.723000+00:00",
+  "message_count": 28,
+  "total_reactions": 0,
+  "author_id": "1372124045847429182",
+  "first_message": "测试中....测试模型是gemini 3 pro。",
+  "attachments": [
+    {
+      "filename": "48696e616e6177692054656e736869.json",
+      "type": "preset",
+      "size": 37867,
+      "downloaded": true
+    },
+    {
+      "filename": "9bea11e15583adec.json",
+      "type": "preset",
+      "size": 51594,
+      "downloaded": true
+    },
+    {
+      "filename": "9e46c4bd6f6cbcdd.json",
+      "type": "preset",
+      "size": 53116,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-02-02-16-12-59-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg",
+      "type": "image",
+      "size": 72502,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-2026-02-02T08_22_23.333Z.json",
+      "type": "regex",
+      "size": 16800,
+      "downloaded": true
+    }
+  ]
+}

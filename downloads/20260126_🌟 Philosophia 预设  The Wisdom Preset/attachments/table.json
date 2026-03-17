@@ -1,0 +1,236 @@
+{
+    "sheet_TradingConcepts": {
+        "uid": "sheet_TradingConcepts",
+        "name": "交易知识库",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "skipTop": false,
+            "alternateLevel": "0",
+            "selectedCustomStyleKey": "自定义样式",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1"
+                }
+            }
+        },
+        "sourceData": {
+            "note": "记录用户已掌握的交易核心概念，只记录经过讲授和考核验证的知识点。",
+            "initNode": "",
+            "deleteNode": "当用户进入更高阶段时，精简基础条目，仅保留核心支柱概念。",
+            "updateNode": "当用户对某概念的理解深化时更新笔记。",
+            "insertNode": "当用户首次习得新概念并通过模拟验证时。"
+        },
+        "content": [
+            [
+                null,
+                "概念/术语",
+                "类别",
+                "掌握笔记"
+            ],
+            [
+                "",
+                "示例：均线金叉",
+                "技术分析/均线系统",
+                "短期均线上穿长期均线，通常视为买入信号。但需结合量能和大盘环境判断有效性。"
+            ]
+        ]
+    },
+    "sheet_TradingMilestones": {
+        "uid": "sheet_TradingMilestones",
+        "name": "学习里程碑",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "alternateLevel": 0,
+            "skipTop": false,
+            "selectedCustomStyleKey": "",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1",
+                    "replaceDivide": ""
+                }
+            }
+        },
+        "sourceData": {
+            "note": "记录已完成的学习阶段和重要突破。",
+            "initNode": "",
+            "deleteNode": "极少删除。",
+            "updateNode": "当用户后续有新的理解突破时。",
+            "insertNode": "当一个学习模块完成时。"
+        },
+        "content": [
+            [
+                null,
+                "阶段/模块",
+                "完成时间",
+                "核心收获",
+                "沧澜评语"
+            ],
+            [
+                "",
+                "示例：K线基础",
+                "待完成",
+                "掌握常见K线形态识别：锤子线/吊颈线/十字星/吞没形态等",
+                "待评"
+            ]
+        ]
+    },
+    "sheet_SimulationRecords": {
+        "uid": "sheet_SimulationRecords",
+        "name": "模拟交易记录",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "alternateLevel": 0,
+            "skipTop": false,
+            "selectedCustomStyleKey": "",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1",
+                    "replaceDivide": ""
+                }
+            }
+        },
+        "sourceData": {
+            "note": "记录用户参与的模拟复盘和决策练习。",
+            "initNode": "",
+            "deleteNode": "当记录过多时归档旧记录。",
+            "updateNode": "当有后续分析补充时。",
+            "insertNode": "每当完成一次模拟复盘时。"
+        },
+        "content": [
+            [
+                null,
+                "模拟场景",
+                "用户决策",
+                "实际走势",
+                "得失分析"
+            ],
+            [
+                "",
+                "示例：2024-01-15 某科技股突破前高",
+                "判断追涨买入",
+                "次日高开低走-5%",
+                "忽视了量能不足的警示信号，追高被套。教训：突破需量能配合。"
+            ]
+        ]
+    },
+    "sheet_TradingSystem": {
+        "uid": "sheet_TradingSystem",
+        "name": "交易系统构建",
+        "domain": "chat",
+        "type": "dynamic",
+        "enable": true,
+        "required": false,
+        "tochat": true,
+        "triggerSend": false,
+        "triggerSendDeep": 1,
+        "config": {
+            "toChat": true,
+            "useCustomStyle": false,
+            "triggerSendToChat": false,
+            "alternateTable": false,
+            "insertTable": false,
+            "alternateLevel": 0,
+            "skipTop": false,
+            "selectedCustomStyleKey": "",
+            "customStyles": {
+                "自定义样式": {
+                    "mode": "regex",
+                    "basedOn": "html",
+                    "regex": "/(^[\\s\\S]*$)/g",
+                    "replace": "$1",
+                    "replaceDivide": ""
+                }
+            }
+        },
+        "sourceData": {
+            "note": "记录用户正在构建的个人交易系统各要素。",
+            "initNode": "",
+            "deleteNode": "当用户明确放弃某规则时。",
+            "updateNode": "当用户优化调整规则时。",
+            "insertNode": "当用户确立新的交易规则时。"
+        },
+        "content": [
+            [
+                null,
+                "系统要素",
+                "用户规则",
+                "测试状态",
+                "沧澜建议"
+            ],
+            [
+                "",
+                "入场条件",
+                "待定义",
+                "未测试",
+                "先从简单的趋势跟踪开始，别一上来就搞太复杂"
+            ],
+            [
+                "",
+                "出场条件",
+                "待定义",
+                "未测试",
+                "止损比止盈重要，先把止损定死"
+            ],
+            [
+                "",
+                "仓位管理",
+                "待定义",
+                "未测试",
+                "单票不超过总仓位20%，这是铁律"
+            ],
+            [
+                "",
+                "风险控制",
+                "待定义",
+                "未测试",
+                "单次止损不超过总资金2%"
+            ]
+        ]
+    },
+    "mate": {
+        "type": "chatSheets",
+        "version": 1
+    }
+}

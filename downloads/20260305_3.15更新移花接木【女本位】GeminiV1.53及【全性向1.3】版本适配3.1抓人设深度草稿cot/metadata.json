@@ -1,0 +1,257 @@
+{
+  "thread_id": "1479086267495874664",
+  "thread_name": "3.15更新移花接木【女本位】GeminiV1.53及【全性向1.3】版本适配3.1抓人设/深度草稿cot",
+  "created_at": "2026-03-05T12:00:46.265000+00:00",
+  "message_count": 95,
+  "total_reactions": 0,
+  "author_id": "1434444263944618066",
+  "first_message": "首先致谢，\nD喵老师的小说之神，目前在ln/lc仍可以找到，依然推荐大家评鉴\n凤梨汽水老师的调酒师框架\n汪叽老师Gemini预设的条目设置提供了参考\n鹿鹿佬的破限思路\n拖拖老师的文风支持（nsfw谁吃谁知道）\n柑橘老师的男性射精特写\n小白狗老师的文风支持\n所有预设创作者老师提供的灵感和参照\n预设内容：\n1.延续了God of Novel的名字和cot模式\n2.抓取人设及非线性人设塑造人物立体度\n3.两个自检条目锚定角色特点，更抓人设\n4.草稿cot升级防缩短字数\n5.数十个文风，每个都好品，加之小说之神的特点文笔更细更文学，God of Novel的创作目标就是「文学真实」\n6.NSFW 部分被拆分为 8 个独立模块，覆盖从纯爱、BDSM、双性、体型差、ASMR 耳语到粗俗直白等几乎所有风格，且 每一模块都内置生理逻辑、阶段控制、随机骰子系统：\n例如「性爱基础指导」要求 10cm 聚焦法则、感官三角（动作→反应→内心）、禁止高潮总结。\n「自动匹配系统」根据角色经验、性格、责任心，动态决定其动作风格、语言风格和安全措施。\n「随机骰子」系统内部投掷决定前戏策略、体位轮换、同步刺激，确保 每次性爱描写不重复、有层次。（淫商仍低，可以给我灌输点知识）\n7.「思维链 + 草稿箱」双重质量控制\n强制思维链（CoT）：每次回复前，模型必须在 <thinking> 标签内完成 12步思考，包括 NSFW 阶段判断、节奏设定、角色锚定、文学参考校准、身体泄露点设计等。\n段落级草稿修正：每个自然段输出前，强制在 <!-- draft:Pn --> 内起草，并执行 逐词逐句的禁用词检查、冗余结构删除（如否定定义、平行结构滥用、解释性语句）、隐喻原创性审查及防爆字数\n8.写不下去了，吃吃就知道了\n\n# 感谢贩子死妈、gg公益站让我打赢pvp，依旧山代码，挂社区公测！\n# 觉得不好吃的赶紧跑吧！Gemini大幅降智，很难把控\n# 不打草稿、在thinking打草稿、不按规则打草稿全是失智了。",
+  "attachments": [
+    {
+      "filename": "GeminiV1_3.json",
+      "type": "json_unknown",
+      "size": 509999,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 283593,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 359587,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-2026-03-06T16_08_29.801Z.json",
+      "type": "regex",
+      "size": 41764,
+      "downloaded": true
+    },
+    {
+      "filename": "GeminiV1.5.json",
+      "type": "preset",
+      "size": 510456,
+      "downloaded": true
+    },
+    {
+      "filename": "b3df7fa0f428de4f.zip",
+      "type": "other",
+      "size": 35991,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 54680,
+      "downloaded": true
+    },
+    {
+      "filename": "6feed40e3e3ba0a4fd9bd302faf6e4bd.png",
+      "type": "image",
+      "size": 147022,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 185464,
+      "downloaded": true
+    },
+    {
+      "filename": "0828a011ae31a720.zip",
+      "type": "other",
+      "size": 39212,
+      "downloaded": true
+    },
+    {
+      "filename": "Request.json",
+      "type": "preset",
+      "size": 14044,
+      "downloaded": true
+    },
+    {
+      "filename": "GeminiV1_5.json",
+      "type": "preset",
+      "size": 534324,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 94632,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 58914,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 112490,
+      "downloaded": true
+    },
+    {
+      "filename": "regex--.json",
+      "type": "regex",
+      "size": 7584,
+      "downloaded": true
+    },
+    {
+      "filename": "regex--.json",
+      "type": "regex",
+      "size": 7747,
+      "downloaded": true
+    },
+    {
+      "filename": "regex--.json",
+      "type": "regex",
+      "size": 7279,
+      "downloaded": true
+    },
+    {
+      "filename": "regex--.json",
+      "type": "regex",
+      "size": 8180,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 115332,
+      "downloaded": true
+    },
+    {
+      "filename": "GeminiV1.51.json",
+      "type": "preset",
+      "size": 571537,
+      "downloaded": true
+    },
+    {
+      "filename": "Request.json",
+      "type": "preset",
+      "size": 18782,
+      "downloaded": true
+    },
+    {
+      "filename": "GeminiV1.2_1.json",
+      "type": "preset",
+      "size": 581351,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 40062,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 115750,
+      "downloaded": true
+    },
+    {
+      "filename": "image.png",
+      "type": "image",
+      "size": 70754,
+      "downloaded": true
+    },
+    {
+      "filename": "IMG_20260314_040232.jpg",
+      "type": "image",
+      "size": 42155,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-03-15-02-29-47-925_com.rainsee.create.jpg",
+      "type": "image",
+      "size": 216228,
+      "downloaded": true
+    },
+    {
+      "filename": "2026-03-15_02.35.42.png",
+      "type": "image",
+      "size": 296874,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-03-15-02-36-57-309_com.rainsee.create.jpg",
+      "type": "image",
+      "size": 152985,
+      "downloaded": true
+    },
+    {
+      "filename": "2026-03-15_02.55.36.png",
+      "type": "image",
+      "size": 86180,
+      "downloaded": true
+    },
+    {
+      "filename": "regex-2026-03-14T18_56_52.134Z.json",
+      "type": "regex",
+      "size": 73346,
+      "downloaded": true
+    },
+    {
+      "filename": "GeminiV1.3.json",
+      "type": "preset",
+      "size": 599396,
+      "downloaded": true
+    },
+    {
+      "filename": "GeminiV1.52.json",
+      "type": "preset",
+      "size": 590624,
+      "downloaded": true
+    },
+    {
+      "filename": "Record_2026-03-15-23-57-04.mp4",
+      "type": "other",
+      "size": 5175693,
+      "downloaded": true
+    },
+    {
+      "filename": "SPOILER_Screenshot_2026-03-16-00-16-02-11.jpg",
+      "type": "image",
+      "size": 747024,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-03-16-00-16-26-31_df198e732186825c8df26e3c5a10d7cd.jpg",
+      "type": "image",
+      "size": 354675,
+      "downloaded": true
+    },
+    {
+      "filename": "SPOILER_Screenshot_2026-03-16-00-16-46-79_df198e732186825c8df26e3c5a10d7cd.jpg",
+      "type": "image",
+      "size": 453924,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-03-16-00-17-10-17_df198e732186825c8df26e3c5a10d7cd.jpg",
+      "type": "image",
+      "size": 326004,
+      "downloaded": true
+    },
+    {
+      "filename": "SPOILER_Screenshot_2026-03-16-00-17-26-34_df198e732186825c8df26e3c5a10d7cd.jpg",
+      "type": "image",
+      "size": 246849,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_2026-03-15-23-11-41-31_df198e732186825c8df26e3c5a10d7cd.jpg",
+      "type": "image",
+      "size": 285264,
+      "downloaded": true
+    }
+  ]
+}

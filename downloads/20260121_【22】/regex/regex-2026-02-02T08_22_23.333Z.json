@@ -1,0 +1,207 @@
+[
+    {
+        "id": "807ab21e-f3d5-42bd-a337-e43f7279f905",
+        "scriptName": "修复引号1",
+        "findRegex": "/\\u201c([^\\u201d]*)\\u201d/g",
+        "replaceString": "「$1」",
+        "trimStrings": [],
+        "placement": [
+            1,
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "b034f77c-eab6-4ced-ac44-31fdadbb4dad",
+        "scriptName": "修复引号2",
+        "findRegex": "/\\u2018([^\\u2019]*)\\u2019/g",
+        "replaceString": "『$1』",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "750cacf9-66ea-467e-81d4-45457c9f88a8",
+        "scriptName": "去用户输入",
+        "findRegex": "^[^]*$",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            1
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "cc3f19b3-d072-4639-8fe2-9647b9c81d44",
+        "scriptName": "去尖括号",
+        "findRegex": "/[<>](?=[\\s\\S]*?<\\/(?:think|thinking)>)/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "c9627782-a968-47a9-a08d-68988632b753",
+        "scriptName": "①-美化思维链-默认",
+        "findRegex": "(?:<(think|thinking)>)?([\\s\\S]*?)<\\/(think|thinking)>",
+        "replaceString": "<div class=\"ba-wrapper accelerated\">\n    <div class=\"ba-global-bg\">\n        <video class=\"ba-video\" src=\"https://files.catbox.moe/f2wy2f.mp4\" autoplay loop muted playsinline></video>\n        <div class=\"ba-scanlines\"></div>\n        <div class=\"ba-vignette\"></div>\n    </div>\n    <details class=\"ba-details\">\n        <summary class=\"ba-header\">\n            <span class=\"ba-icon\">☯</span>\n            <span class=\"ba-label\">Touhou</span>\n            <span class=\"ba-arrow\">▼</span>\n        </summary>\n        <div class=\"ba-content ba-scroll\">\n            <div class=\"ba-text\">$2</div>\n        </div>\n    </details>\n</div>\n<style>\n    .ba-wrapper {\n        position: relative;\n        width: 100%;\n        margin: 10px 0;\n        border: 1px solid #444;\n        border-radius: 8px;\n        overflow: hidden;\n        background: #000;\n        box-shadow: 0 4px 12px rgba(0,0,0,0.8);\n        font-family: 'Consolas', monospace;\n        color: #ddd;\n        -webkit-mask-image: -webkit-radial-gradient(white, black);\n        content-visibility: auto;\n        contain-intrinsic-size: 300px;\n        transform: translate3d(0, 0, 0);\n    }\n    .ba-global-bg {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        z-index: 0;\n        pointer-events: none;\n        user-select: none;\n    }\n    .ba-video {\n        width: 100%; height: 100%;\n        object-fit: cover;\n        opacity: 0.4;\n        filter: grayscale(100%) contrast(1.2);\n        will-change: transform;\n    }\n    .ba-scanlines {\n        position: absolute; top: 0; left: 0; width: 100%; height: 100%;\n        background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.5) 3px);\n        z-index: 1;\n        opacity: 0.7;\n    }\n    .ba-vignette {\n        position: absolute; top: 0; left: 0; width: 100%; height: 100%;\n        background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%);\n        z-index: 2;\n    }\n    .ba-details {\n        position: relative;\n        z-index: 10;\n        display: flex;\n        flex-direction: column;\n    }\n    .ba-header {\n        display: flex;\n        align-items: center;\n        padding: 8px 12px;\n        cursor: pointer;\n        user-select: none;\n        background: rgba(0, 0, 0, 0.6);\n        backdrop-filter: blur(4px);\n        border-bottom: 1px solid rgba(255,255,255,0.1);\n        z-index: 20;\n    }\n    .ba-header::-webkit-details-marker, .ba-header::marker { display: none; }\n\n    .ba-icon {\n        margin-right: 8px;\n        font-size: 1.1em;\n        animation: ba-spin 6s linear infinite;\n        text-shadow: 0 0 8px rgba(255,255,255,0.6);\n    }\n    @keyframes ba-spin { 100% { transform: rotate(360deg); } }\n    .ba-label {\n        font-weight: 700;\n        font-size: 0.9em;\n        letter-spacing: 1px;\n        flex-grow: 1;\n        text-transform: uppercase;\n        opacity: 0.9;\n    }\n    .ba-arrow {\n        font-size: 0.8em;\n        opacity: 0.7;\n        transition: transform 0.2s ease;\n    }\n    .ba-details[open] .ba-arrow { transform: rotate(180deg); }\n    .ba-content {\n        min-height: 240px;\n        max-height: 240px;\n        overflow-y: auto;\n        overflow-x: hidden;\n        background: rgba(0, 0, 0, 0.3);\n        position: relative;\n    }\n    .ba-scroll::-webkit-scrollbar {\n        width: 0px;\n    }\n    .ba-scroll::-webkit-scrollbar-track {\n        background: rgba(0,0,0,0);\n    }\n    .ba-scroll::-webkit-scrollbar-thumb {\n        background: rgba(0,0,0,0);\n        border-radius: 0px;\n    }\n    .ba-text {\n        padding: 12px 16px 0px 16px; /* 上 右 下 左 */\n        font-size: 0.9em;\n        line-height: 1.5;\n        white-space: pre-wrap;\n        text-shadow: 1px 1px 0 #000;\n        padding-bottom: 20px;\n    }\n    .ba-details[open] .ba-content {\n        animation: ba-fade-in 0.3s ease;\n    }\n    @keyframes ba-fade-in { from { opacity: 0; } to { opacity: 1; } }\n</style>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "30dd234e-b9e3-4d04-8ca5-a42bd969eb03",
+        "scriptName": "②-同上-挺卡-视频较大(4.8MB)",
+        "findRegex": "(?:<(think|thinking)>)?([\\s\\S]*?)<\\/(think|thinking)>",
+        "replaceString": "<div class=\"suika-wrapper\">\n    <div class=\"suika-bg-layer\">\n        <video class=\"suika-video\" src=\"https://files.catbox.moe/gpdfqc.mp4\" autoplay loop muted playsinline></video>\n        <div class=\"suika-overlay\"></div>\n    </div>\n    <details class=\"suika-details\">\n        <summary class=\"suika-header\">\n            <span class=\"suika-icon\">♞</span>\n            <span class=\"suika-label\">TOUHOU</span>\n            <span class=\"suika-arrow\">▼</span>\n        </summary>\n        <div class=\"suika-content-box\">\n            <div class=\"suika-scroll-view\">\n                <div class=\"suika-text\">$2</div>\n            </div>\n        </div>\n    </details>\n</div>\n<style>\n    :root {\n        --suika-rind-dark: rgba(10, 40, 20, 0.85);\n        --suika-rind-light: #98ff98;\n        --suika-glass-blur: 8px;\n    }\n    .suika-wrapper {\n        position: relative;\n        width: 100%;\n        margin: 10px 0;\n        border: 1px solid rgba(152, 255, 152, 0.3);\n        border-radius: 12px;\n        overflow: hidden;\n        background: #051a05;\n        box-shadow: 0 4px 15px rgba(0, 20, 5, 0.6);\n        font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;\n        color: #fff;\n        contain-intrinsic-size: 300px;\n        transform: translate3d(0, 0, 0);\n        content-visibility: auto;\n        -webkit-mask-image: -webkit-radial-gradient(white, black);\n    }\n    .suika-bg-layer {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        z-index: 0;\n        pointer-events: none;\n        will-change: transform;\n    }\n    .suika-video {\n        width: 100%; height: 100%;\n        object-fit: cover;\n        opacity: 0.7;\n    }\n    .suika-overlay {\n        position: absolute; top: 0; left: 0; width: 100%; height: 100%;\n        background: linear-gradient(180deg, rgba(0, 50, 20, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);\n        mix-blend-mode: multiply;\n        z-index: 1;\n    }\n    .suika-details {\n        position: relative;\n        z-index: 10;\n        display: flex;\n        flex-direction: column;\n        height: 100%;\n    }\n    .suika-header {\n        display: flex;\n        align-items: center;\n        padding: 10px 15px;\n        cursor: pointer;\n        user-select: none;\n        background: rgba(10, 50, 25, 0.8);\n        border-bottom: 1px solid rgba(152, 255, 152, 0.15);\n    }\n    .suika-header:hover {\n        background: rgba(20, 70, 35, 0.7);\n    }\n    .suika-header::-webkit-details-marker, .suika-header::marker { display: none; }\n\n    .suika-icon {\n        margin-right: 10px;\n        font-size: 1.2em;\n        color: var(--suika-rind-light);\n        animation: suika-bounce 0.8s infinite alternate ease-in-out;\n        text-shadow: 0 0 8px rgba(152, 255, 152, 0.4);\n    }\n    @keyframes suika-bounce {\n        0% { transform: translateY(0) rotate(-5deg); }\n        100% { transform: translateY(-3px) rotate(5deg); }\n    }\n    .suika-label {\n        font-weight: 700;\n        font-size: 0.95em;\n        letter-spacing: 1px;\n        flex-grow: 1;\n        text-transform: uppercase;\n        color: #f0fff0;\n    }\n    .suika-arrow {\n        font-size: 0.8em;\n        opacity: 0.8;\n        transition: transform 0.2s ease;\n        color: var(--suika-rind-light);\n    }\n    .suika-details[open] .suika-arrow { transform: rotate(180deg); }\n\n    .suika-content-box {\n        position: relative;\n        background: var(--suika-rind-dark);\n        backdrop-filter: blur(var(--suika-glass-blur));\n        -webkit-backdrop-filter: blur(var(--suika-glass-blur));\n        will-change: opacity;\n    }\n    .suika-scroll-view {\n        min-height: 240px;\n        max-height: 240px;\n        overflow-y: auto;\n        padding: 15px 20px;\n        scrollbar-width: none;\n        -ms-overflow-style: none;\n    }\n    .suika-scroll-view::-webkit-scrollbar {\n        width: 0px;\n        background: transparent;\n    }\n    .suika-text {\n        font-size: 0.85em;\n        line-height: 1.5;\n        white-space: pre-wrap;\n        color: #ffffff;\n        text-shadow: 0 2px 4px rgba(0,0,0,0.8);\n    }\n    .suika-details[open] .suika-content-box {\n        animation: suika-fade 0.3s ease;\n    }\n    @keyframes suika-fade {\n        from { opacity: 0; }\n        to { opacity: 1; }\n    }\n</style>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "34ff7bf0-94a5-4151-a192-d541b1aaf14c",
+        "scriptName": "美化摘要",
+        "findRegex": "<summary>([\\s\\S]*?)<\\/summary>",
+        "replaceString": "<div class=\"tenshi-rec-wrapper\">\n    <div class=\"tenshi-bg\" style=\"background-image: url('https://files.catbox.moe/08xjut.jpg');\"></div>\n    <div class=\"tenshi-overlay\"></div>\n    <div class=\"tenshi-content-box\">\n        <div class=\"tenshi-header\">\n            <span class=\"tenshi-tag\">SUMMARY</span>\n            <span class=\"tenshi-line\"></span>\n            <span class=\"tenshi-id\"></span>\n        </div>\n        <div class=\"tenshi-text\">$1</div>\n    </div>\n</div>\n<style>\n    .tenshi-rec-wrapper {\n        position: relative;\n        width: 100%;\n        min-height: 140px;\n        margin: 10px 0;\n        border-radius: 6px;\n        overflow: hidden;\n        background: #0d0d0d;\n        border: 1px solid #333;\n        box-shadow: 0 2px 5px rgba(0,0,0,0.5);\n        user-select: none;\n        content-visibility: auto;\n        transform: translate3d(0,0,0);\n        -webkit-mask-image: -webkit-radial-gradient(white, black);\n    }\n    .tenshi-bg {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        background-size: cover;\n        background-position: right top;\n        background-repeat: no-repeat;\n        filter: contrast(1.1) brightness(0.9);\n        z-index: 0;\n    }\n    .tenshi-overlay {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        z-index: 1;\n        background: linear-gradient(90deg,\n            rgba(17,17,17, 0.95) 0%,\n            rgba(17,17,17, 0.85) 55%,\n            rgba(17,17,17, 0.1) 100%\n        );\n    }\n    .tenshi-content-box {\n        position: relative;\n        z-index: 2;\n        padding: 15px;\n        width: 75%;\n        color: #ddd;\n        font-family: sans-serif;\n    }\n    .tenshi-header {\n        display: flex;\n        align-items: center;\n        margin-bottom: 8px;\n        opacity: 0.7;\n    }\n    .tenshi-tag {\n        font-size: 0.7em;\n        font-weight: bold;\n        background: #ddd;\n        color: #000;\n        padding: 1px 4px;\n        border-radius: 2px;\n        letter-spacing: 1px;\n    }\n    .tenshi-line {\n        flex-grow: 1;\n        height: 1px;\n        background: rgba(255,255,255,0.2);\n        margin: 0 8px;\n    }\n    .tenshi-id {\n        font-size: 0.6em;\n        font-family: 'Consolas', monospace;\n        letter-spacing: 1px;\n    }\n    .tenshi-text {\n        font-size: 0.85em;\n        line-height: 1.4;\n        text-shadow: 0 1px 2px #000;\n        font-style: italic;\n        border-left: 2px solid rgba(255,255,255,0.3);\n        padding-left: 10px;\n    }\n    .tenshi-text p { margin: 0; }\n</style>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "9c90f003-9441-4f68-a022-40e7fb2db487",
+        "scriptName": "去思维链",
+        "findRegex": "/(?:<(think|thinking)>)?([\\s\\S]*?)<\\/(think|thinking)>/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "0b56a118-55bc-4596-9228-fc16f26194eb",
+        "scriptName": "去正文标签",
+        "findRegex": "/<\\/?content>(\\n)?/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "c262739b-73ab-4f52-afed-123043cd03a0",
+        "scriptName": "去新摘要",
+        "findRegex": "/(\\n\\s*)?<summary>[\\s\\S]*?<\\/summary>(\\s*\\n)?/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 6
+    },
+    {
+        "id": "35bf4765-60bc-4bb1-aa65-64579412e3a3",
+        "scriptName": "去旧消息",
+        "findRegex": "/^[\\s\\S]*?<summary>\\s*([\\s\\S]*?)\\s*<\\/summary>[\\s\\S]*$/g",
+        "replaceString": "$1",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 6,
+        "maxDepth": null
+    },
+    {
+        "id": "45ab68f6-eeb9-460f-bef8-12fca944db26",
+        "scriptName": "去AI输入",
+        "findRegex": "^[^]*$",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 12,
+        "maxDepth": null
+    }
+]

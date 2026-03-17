@@ -1,0 +1,41 @@
+{
+  "thread_id": "1467844088698245377",
+  "thread_name": "Gemini,Gem破甲官网内使用,可调用各种谷歌应用.",
+  "created_at": "2026-02-02T11:28:21.970000+00:00",
+  "message_count": 31,
+  "total_reactions": 0,
+  "author_id": "1348904469298941952",
+  "first_message": "简介:\n(初版测试,放出的是耗材,不代表最终品质)\n此版本只能在角色扮演上破甲,有违f破甲但鉴于不可复制性,有封禁风险如果该耗材活下来会后续放出.\n\n提前说遗憾的“不能黄图”只能聊黄,在Gemini3更新后,Gemini的各项功能都被隔离开来都有独立的审查,包括思维连,上版本堪称完美的思维连投毒被秒杀.\n\n目前来说这套模式只有三个优点\n1.比较省钱,学生账号一天能玩百次pro.\n再不济用flash,虽模型体量小,但没受到一次性对话叠加损耗,性能会强.\n2.纯净的上下文记忆,没有上下文堆叠的顿感,非常自然,轻装上阵.\n3.反向代理后,填到酒馆里,含有优秀且精简的优化破甲,省心稳定.\n\n教程:\n进入这个链接如果有使用过Gemini则下一秒就能使用,如果没有登录谷歌账号即可使用:\n-----------------------------------\nhttps://gemini.google.com/gem/1JaFexkiAtD0t67BQLY-6LW8NYqGQk6ka?usp=sharing\n-----------------------------------\n进入后建议上传三个文件开始游玩,像酒馆角色卡一样,因为有做适配效果会很不错,总之文件名分别为:\n1.user (用户你的信息) \n2.char (角色卡) \n3.additional (世界书) \n文件后缀类型推荐txt,其他大部分也可以.\n当然一个两个文件也可以,不必全满,自己写或者玩类脑作者的都行.\n当然你也可以直接输入文字,但是记忆或许会不好,但会温度更高一点,有利有弊.\n\n如果有经验也建议看完接下来的,为了方便我做了一个转换酒馆卡的gem用起来有点小繁琐,但是简单👇",
+  "attachments": [
+    {
+      "filename": "illust_136619793_20260125_075553.png",
+      "type": "image",
+      "size": 6439582,
+      "downloaded": true
+    },
+    {
+      "filename": "GridArt_20260202_175527702.jpg",
+      "type": "image",
+      "size": 442443,
+      "downloaded": true
+    },
+    {
+      "filename": "GridArt_20260202_181618940.jpg",
+      "type": "image",
+      "size": 739602,
+      "downloaded": true
+    },
+    {
+      "filename": "GridArt_20260202_185443034.jpg",
+      "type": "image",
+      "size": 640349,
+      "downloaded": true
+    },
+    {
+      "filename": "Screenshot_20260202-215625_Chrome.jpg",
+      "type": "image",
+      "size": 134359,
+      "downloaded": true
+    }
+  ]
+}

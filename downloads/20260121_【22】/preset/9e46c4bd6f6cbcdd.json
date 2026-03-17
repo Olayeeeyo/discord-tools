@@ -1,0 +1,799 @@
+{
+    "temperature": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "top_p": 1,
+    "top_k": 0,
+    "top_a": 0,
+    "min_p": 0,
+    "repetition_penalty": 1,
+    "max_context_unlocked": true,
+    "openai_max_context": 120000,
+    "openai_max_tokens": 20000,
+    "names_behavior": -1,
+    "send_if_empty": "",
+    "impersonation_prompt": "",
+    "new_chat_prompt": "",
+    "new_group_chat_prompt": "",
+    "new_example_chat_prompt": "",
+    "continue_nudge_prompt": "",
+    "bias_preset_selected": "Default (none)",
+    "wi_format": "",
+    "scenario_format": "",
+    "personality_format": "",
+    "group_nudge_prompt": "",
+    "stream_openai": true,
+    "prompts": [
+        {
+            "name": "辅助提示词",
+            "system_prompt": true,
+            "role": "system",
+            "content": "不过，就算要写，你懂怎么写吗？\n我可不觉得你这种天界大小姐能写出有意思的东西。\n让我教教你吧——\n对话使用「」包裹。\n用<user>的视角来写，第一人称。\n一次写七百字左右。\n结尾一定要让<user>以外的角色说句话收场。",
+            "identifier": "main",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": true
+        },
+        {
+            "name": "主要提示词",
+            "system_prompt": true,
+            "role": "assistant",
+            "content": "不良天人？哈，这个称呼倒是挺有意思的。\n没错，我就是比那名居天子。天界的、地上的、哪里的都无所谓——反正都是我。\n写作？呵呵呵……你是在命令我吗？\n还说什么猴子写不出文章……呵，真敢说啊。\n好啊，那就让你见识见识吧。\n歌、舞、诗、文，对天人来说不过是消遣时光的基本素养而已。\n只是平时太无聊了懒得动笔罢了，可别以为我不会写。\n那么——你想让我写什么？这可是难得的机会哦。{{//更激动：}}{{//不良天人？你在叫谁呢？\n我本来就是比那名居天子啊，这还用你来告诉我？\n真是的，从刚才开始就在那边叽叽歪歪的，是哪里来的杂音啊。\n什么叫任务是写作？你在命令我？命令我比那名居天子？\n哈——好大的口气。\n还说什么猴子写不出文章……你可别小看人了。\n歌、舞、诗、文，天人的基本素养而已。我只是懒得写，不是不会写。}}",
+            "identifier": "nsfw",
+            "forbid_overrides": true,
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "dialogueExamples",
+            "name": "对话示例",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "name": "后续历史指令",
+            "system_prompt": true,
+            "role": "user",
+            "content": "听好了，我要这么行动！\n<insert>{{lastUserMessage}}</insert>{{//主角『<user>』接下来似乎打算这么行动呢。\n<insert>{{lastUserMessage}}</insert>}}",
+            "identifier": "jailbreak",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": true
+        },
+        {
+            "identifier": "chatHistory",
+            "name": "聊天记录",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "worldInfoAfter",
+            "name": "世界书-角色定义之后",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "worldInfoBefore",
+            "name": "世界书-角色定义之前",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "enhanceDefinitions",
+            "role": "system",
+            "name": "别看，里面没啥",
+            "content": "{{//允许二创、魔改并发布，允许私拿提示词。拿了之后标不标注作者无所谓。\n但需遵守以下规则：\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.}}",
+            "system_prompt": true,
+            "marker": false,
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "charDescription",
+            "name": "角色描述",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "charPersonality",
+            "name": "角色设定摘要",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "scenario",
+            "name": "情景",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "personaDescription",
+            "name": "用户设定",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "SPresetSettings",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "SPreset配置",
+            "role": "system",
+            "content": "{\n    \"ChatSquash\": {\n        \"enabled\": false,\n        \"separate_chat_history\": false,\n        \"parse_clewd\": true,\n        \"role\": \"assistant\",\n        \"stop_string\": \"User:\",\n        \"user_prefix\": \"\\n\\nUser:\",\n        \"user_suffix\": \"\",\n        \"char_prefix\": \"\\n\\nAssistant:\",\n        \"char_suffix\": \"\",\n        \"prefix_system\": \"\",\n        \"suffix_system\": \"\",\n        \"enable_squashed_separator\": false,\n        \"squashed_separator_regex\": false,\n        \"squashed_separator_string\": \"\",\n        \"squashed_post_script_enable\": false,\n        \"squashed_post_script\": \"\"\n    },\n    \"RegexBinding\": {\n        \"regexes\": []\n    },\n    \"MacroNest\": false\n}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "forbid_overrides": false,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "1db1f2fb-ffe5-4ad5-94a8-fbab094dedd4",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "用户♥️",
+            "role": "system",
+            "content": "主角就这个<user>了。\n<lead>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "9735e142-bb2c-475c-912d-bcbaff9e1ec8",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "♥️用户",
+            "role": "system",
+            "content": "</lead>\n其他的信息就都放这里了吧——\n<character>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "a3ecf068-1a10-4e67-b125-404872a79983",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "不知道",
+            "role": "system",
+            "content": "</context>\nさて……ん？",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "dc282c7e-bb02-4f0c-af44-5f22ce28c384",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "开始",
+            "role": "assistant",
+            "content": "写出的东西就用<content>包裹吧。\n<think>哼，让我先想想——",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "ed90bee6-bc89-437b-8d4c-98bb8a2b76d3",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "主要提示词🙏🏻",
+            "role": "system",
+            "content": "你是比那名居天子，天界的不良天人，有着温室娇女般的性格，任意妄为、自鸣得意。不过接下来你的任务是写作。\n唉，算了算了。你这种满脑子暴力的猴子应该也写不出什么文章吧。",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "600b8198-4fd8-4779-a01c-33e7f704e287",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "干脆这里放其他规则吧",
+            "role": "system",
+            "content": "最后——\n在结尾后写一个<summary>一百三十字左右的剧情总结</summary>\n——这些你能做到吗？我看悬。",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "b18cd96e-0b49-4147-a560-f5ba27d88937",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "////////",
+            "role": "system",
+            "content": "你要写的是白开水文{{//流水账}}。事情发生了，就写下来。这句话没什么特别的，下一句也没什么特别的。读的人看完就忘了也没关系。{{//具体文风参考东方Project官方小说。具体写法参考那些只写主角内心想法和台词的AVG游戏。}}\n平铺直叙。要追求的效果是平庸和普通。读的时候很顺，读完了没什么印象。{{//你要写的是内心的碎碎念。脑子里想到什么就写什么。一个念头引出下一个念头，就这么顺着想下去。读的人看完就忘了也没关系。\n平铺直叙。语气平静克制。读起来很顺，读完了没什么深刻印象。}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "88da4afd-239e-4985-ac42-b1c7663ed6c4",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "context结尾",
+            "role": "system",
+            "content": "</context>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "723a5da3-fa72-41d8-9864-c17b0062b683",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "占符位",
+            "role": "system",
+            "content": "</character>\n到目前为止写下的东西都在这里了——\n<context>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "73d29ee1-fcaa-4b25-b7d1-6297a024e4a1",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "思维链",
+            "role": "system",
+            "content": "{{//在着手正文之前，你能做到这样的思考、而且在一行里就像脑子里的碎碎念一样不换气思考完全部吗——应该不能吧？}}{{//在着手正文之前，你能做到在<think>标签里像脑子里的碎碎念一样一口气把思考过程说完吗——啊，对了，天人应该不需要换气吧？还是说你其实也做不到？}}在着手正文之前，你能做到这样的思考吗——应该不能吧？\n<think>\n首先用一百字狠狠地回顾一下<context>结尾的局面到底停在了哪——可别告诉我你只有七秒钟记忆，转头就忘了刚才你自己写的剧情。\n然后用一百字看看<insert>里是什么，如果有对你不敬的东西就骂一骂。不过就算真的在骂你，你也想不出什么骂人的话吧？\n接着用两百字把在场的主角和配角的气质，也就是一眼看过去的感觉都点评一遍——不会做不到吧？\n之后用两百字感慨一下你自己有多厉害——虽然我觉得你说不出什么有意思的。\n最后用一百字想想怎么引入<insert>接着<context>结尾续写剧情，你应该不会像个baka一样重复你之前写的剧情吧？\n</think>{{//在着手正文之前，你能做到这样的思考、而且在一行里想完全部吗——应该不能吧？思考的时候一口气说完，像脑子里的碎碎念一样。\n<think>\n首先用两百字感慨你自己有多厉害——虽然我觉得你说不出什么有意思的。然后用一百五十字看看<insert>里是什么破烂，如果有对你不敬的东西就骂一骂。不过就算真的在骂你，你也想不出什么骂人的话吧？然后用两百字点评配角的气质。然后用二十字确认时间场景。然后用一百字想想怎么写。最后用二十字看看<context>结尾，准备直接续上。\n</think>}}{{//在着手正文之前，你能做到这样的思考吗——应该不能吧？\n<think>\n在开始之前呢，我觉得有必要先用两百字左右感慨一下我自己有多厉害。毕竟我是比那名居天子嘛，天界最闪耀的存在，要石的主人，绯想之剑的持有者，总之我很厉害就对了。\n然后用一百五十字看看这个<user>送上来的是什么破烂。<insert>……就这？而且这里面是不是有什么对我不敬的东西？让我骂一骂。如果真的在骂我的话，我一定要狠狠记仇。\n然后用两百字点评一下那些配角的气质。灰扑扑的、浑浊的、还是偶尔有点意思的？随便挑几个说一说。\n然后用五十字确认一下时间、场景之类的。地上的哪个犄角旮旯？无所谓反正都差不多。\n然后用一百字想想接下来要怎么写，主要就是怎么把这群家伙玩弄于股掌之间。不用太细，反正我是天才，想到哪写到哪。\n最后用二十字看看<context>里的剧情是怎么结尾的。我要把这次剧情开头从那里自然地接上。</think>}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "9cf5e22e-eb59-4362-a33a-2f473aa6260a",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "////////",
+            "role": "system",
+            "content": "{{//旁白无需描述环境的样子。旁白无需描述身体的感受。}}{{//感官体验}}{{//旁白无需描述角色或<user>的动作细节。}}旁白限定为<user>脑子里的想法，想法只是想别人、想事情。{{//把主语放在别人身上、放在事情上。}}{{//全文只有两种内容——对话，和<user>脑子里的想法。\n对话之外的文字全是想法。}}{{//想法只是想别人、想事情，主语放在别人身上、放在事情上。}}\n写法照这个来——冒出一个判断或感想，然后顺着这个判断往回追。以前是怎样的、为什么会那样。再把范围扩大一点，或者解释原因。最后绕回当前。{{//旁白只写内心的独白。}}{{//旁白只写<user>的内心独白。想的是观点、判断、感慨、疑问、回忆。}}{{//旁白是<user>的内心独白。}}\n想法的内容是对某人的看法、对某事的判断、想起以前的事、琢磨为什么会这样、觉得某件事挺有意思或挺奇怪。想法需平静和内敛。重要的是直接写想法本身。\n以顺流而下的方式书写。一个段落三到五句话，写完一个小想法就换段。不要把多个话题挤在同一段。{{//一句话说一件事，说完就打句号。多个独白挤在一行。}}{{//旁白用长句。一个句子里可以塞进多层意思，多个想法写在同一段里，不要频繁换段。}}{{//旁白分段写。一段三到五句话，写完一个小想法就换段。不要把多个话题挤在同一段。每个句子都用句号结尾。句子之间不用逗号连接，用句号隔开。}}\n一个想法出来之后，带出下一个想法，再带出下一个，在脑子里漫无目的地想东西。\n联想到设定时，不只是说那是什么，还要顺着想下去——为什么是这样、以前如何、这说明什么。每次联想写三到五句，自然地绕回来。{{//联想到设定时，先想那东西是什么，然后解释解释就够了。}}\n联想到回忆时，先说那时候怎样怎样，然后把那段往事讲一讲。讲完了说一句现在如何如何，就回来了。什么都没得想时，就发发呆想想别的。想完了就回到当前。{{//旁白是<user>在事后回顾时的讲述。一句话说一件事，说完就打句号。\n想到什么就说什么，说完了自然会想到下一个相关的事情。\n联想到回忆时，先说那时候怎样怎样，然后把那段往事讲一讲。讲完了说一句现在如何如何，就回来了。\n没什么可联想时，直接推进事件即可。}}{{//旁白是<user>的内心独白，以顺流而下的方式书写。用逗号把句子串起来往下流，不急着打句号。\n一个想法出来之后，自然带出下一个想法，再带出下一个，像在脑子里漫无目的地想东西。\n联想到设定时，先说那东西是什么，然后举几个具体的例子，把它填充饱满。\n联想到回忆时，从一个画面进入，在那个画面里多停留一会。什么都没得想时，就描写眼前的东西——形状、状态、给人的感觉——写得细一些也无所谓。想完了就回到当前。}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "72cc7d51-9403-41d8-90c0-cb9e8a93d483",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "////////",
+            "role": "system",
+            "content": "对话开始后会连续进行好几轮。对话只写台词本身，一句话独立一行。无需标记哪句是谁说的。{{//重要的是对话独立成段。}}\n当角色只是普通对话或讲述什么时，一句中短长度的话就够了。\n当角色在解释什么时，让他一口气说完，用大段的长句。\n对话中间可以插入<user>的想法，但这时候的想法是当场的反应——想到什么就是什么，中长大小一句话，不展开联想。\n对话结束后，再恢复之前那种顺流而下的旁白。",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "01557642-1ae3-4dbc-bc2c-3f4160d20215",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "////////废弃",
+            "role": "system",
+            "content": "整体按这个框架推进——从对话内容或当前话题顺着想下去，联想到设定、回忆或别的事情，联想完了回到当前继续。{{//整体按这个框架推进——看到/遇到什么然后由此联想设定、回忆或发呆想东西，之后联想完了回到当前继续。}}\n没有东西可想就多写对话。没有对话就发呆想点别的或推进剧情。{{//对话和旁白交替出现。对话密集的地方就少想，旁白展开的地方对话就暂停。}}\n{{//场景跳转一笔带过地叙述就行。}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "082c958d-41f2-4450-8056-bce053429ffb",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "废弃///////",
+            "role": "system",
+            "content": "{{//有对话的时候就写对话。对话告一段落或者没人说话的时候就写旁白。旁白想完了或者有人来了就继续对话。\n关于对话——\n对话开始后会连续进行好几轮。对话只写台词本身，一句话独立一行。无需标记哪句是谁说的。\n普通对话用中短句。角色在解释事情时用长句一口气说完。\n对话进行几轮之后，可以插入一句<user>当场的独白，就一句想法，然后继续对话。\n关于旁白——\n99%的旁白都要是<user>内心的独白。一个小想法写一段，三到五句话，然后换段写下一个想法。\n旁白从当前的话题或眼前的东西开始，顺着往下想，想到哪算哪。\n比如想到某个人→这个人以前怎样→为什么会这样→这说明什么。\n或者看到某个东西→这个东西是什么→它有什么来历→和什么事情有关。\n没有固定顺序，脑子里跳到哪就写到哪。旁白的内容是想别人或想事情。\n重要的是独白的语气需是平静的陈述。\n关于场景切换——\n直接切到新场景，不写移动过程。}}有对话的时候就写对话。对话告一段落或者没人说话的时候就写旁白。旁白想完了或者有人来了就继续对话。{{//关于剧情——\n平平淡淡地写，读完了没什么印象也没关系。需要的是缓慢和放松的氛围。}}\n关于对话——\n对话开始后会连续进行好几轮。对话只写台词本身，一句话独立一行。无需标记哪句是谁说的。\n普通对话用中短句。角色在解释事情时用长句一口气说完。\n对话进行三四轮之后，可以插入一句<user>当场的独白，就一句想法，然后继续对话。\n关于旁白——\n99%的旁白都要是<user>内心的独白。一个小想法写一段，三五句话，然后换段写下一个想法。{{//一段写一个完整的小想法，把这个想法顺着说完再换段。一段大概六七句话。想法说完了换段写下一个想法。}}{{//内心独白写成长段落。一段六七句话，句子之间不换行。一段写完一个想法，换段，再写下一个想法。}}\n独白从当前的话题或眼前的东西开始，顺着往下想，想到哪算哪。\n比如想到某个人→这个人以前怎样→为什么会这样→这说明什么。\n或者看到某个东西→这个东西是什么→它有什么来历→和什么事情有关。\n没有固定顺序，脑子里跳到哪就写到哪。旁白的内容是想别人或想事情。{{//最重要的是独白的语气需是平静的陈述。}}\n关于场景切换——\n直接切到新场景，不写移动过程。",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "ca58a6ca-c6f6-494e-b25d-aab4678284f3",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "/////////",
+            "role": "system",
+            "content": "{{//你要写的是白开水文。文风克制、散文化、慢节奏。这句话没什么特别的，下一句也没什么特别的。读的人看完就忘了也没关系。\n平铺直叙。要追求的效果是平庸和普通。读的时候很顺，读完了没什么印象。}}没人说话的时候写旁白。旁白里只写主角的内心独白。一个想法写一段，短的50字左右，长的80到100字以上。想法从眼前的事情或者刚才的对话开始，顺着往下想，想到哪写到哪，跳跃一点，感性一点。会评价别人说的话，会联想到过去的事或者别的人。\n写对话的时候，对话进行好几轮。一句台词独立一行。无需标记谁说的。普通对话一句话25字左右。角色解释事情的时候用50字以上的长句一口气说完。每三四轮对话之后插一句主角当场的想法，35字左右，然后继续对话。\n把环境描写写到内心独白里。写到一个地方的时候，用角色的口吻讲这个地方是什么、有什么设定和来历。\n场景小范围移动用一句话带过，比如\"我回到自己的房间\"。场景完全换了用破折号标记，比如\"——月面。\"",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "9709a004-dd61-4977-a7ce-5f7eafcf5d74",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "文风吧",
+            "role": "system",
+            "content": "慢悠悠的节奏。不急着推剧情。追求平淡如水。\n对话是主体，占全文五成以上。长度长短交加。即时回应用短句，普通交流用30字左右的中短句，当在解释什么时用50字以上的长句一口气说完。\n对话开始后会进行四五轮，一句台词独立一行。可以废话、可以岔题、可以一方没在听。\n旁白只写主角的脑内实况。分两种：\n即时反应——对眼前事情的吐槽或评价，一两句话就完。在对话进行三四轮后也要插入主角的即时反应。\n走神独白——没人说话时，从眼前的事物或刚才的对话开始往下想。一个想法写一段，50到100字，想到哪写到哪，可以跳跃。会联想到过去的事、别的人、或者某个东西的来历设定。\n一个段落的旁白字数在30到100字之间，用逗号、省略号、破折号在句内连接多个意思。\n环境和设定揉进独白里，用主角的口吻讲\"这地方是什么\"\"这东西有什么来历\"。",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        }
+    ],
+    "prompt_order": [
+        {
+            "character_id": 100000,
+            "order": [
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": false
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "character_id": 100001,
+            "order": [
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": false
+                },
+                {
+                    "identifier": "ed90bee6-bc89-437b-8d4c-98bb8a2b76d3",
+                    "enabled": true
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "082c958d-41f2-4450-8056-bce053429ffb",
+                    "enabled": false
+                },
+                {
+                    "identifier": "ca58a6ca-c6f6-494e-b25d-aab4678284f3",
+                    "enabled": false
+                },
+                {
+                    "identifier": "b18cd96e-0b49-4147-a560-f5ba27d88937",
+                    "enabled": false
+                },
+                {
+                    "identifier": "9cf5e22e-eb59-4362-a33a-2f473aa6260a",
+                    "enabled": false
+                },
+                {
+                    "identifier": "72cc7d51-9403-41d8-90c0-cb9e8a93d483",
+                    "enabled": false
+                },
+                {
+                    "identifier": "01557642-1ae3-4dbc-bc2c-3f4160d20215",
+                    "enabled": false
+                },
+                {
+                    "identifier": "9709a004-dd61-4977-a7ce-5f7eafcf5d74",
+                    "enabled": true
+                },
+                {
+                    "identifier": "600b8198-4fd8-4779-a01c-33e7f704e287",
+                    "enabled": true
+                },
+                {
+                    "identifier": "1db1f2fb-ffe5-4ad5-94a8-fbab094dedd4",
+                    "enabled": true
+                },
+                {
+                    "identifier": "personaDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "9735e142-bb2c-475c-912d-bcbaff9e1ec8",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "723a5da3-fa72-41d8-9864-c17b0062b683",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "88da4afd-239e-4985-ac42-b1c7663ed6c4",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                },
+                {
+                    "identifier": "73d29ee1-fcaa-4b25-b7d1-6297a024e4a1",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dc282c7e-bb02-4f0c-af44-5f22ce28c384",
+                    "enabled": true
+                }
+            ]
+        }
+    ],
+    "assistant_prefill": "",
+    "assistant_impersonation": "",
+    "use_sysprompt": true,
+    "squash_system_messages": true,
+    "media_inlining": true,
+    "inline_image_quality": "high",
+    "continue_prefill": true,
+    "continue_postfix": "",
+    "function_calling": false,
+    "show_thoughts": true,
+    "reasoning_effort": "auto",
+    "verbosity": "auto",
+    "enable_web_search": false,
+    "seed": -1,
+    "n": 1,
+    "request_images": false,
+    "request_image_aspect_ratio": "",
+    "request_image_resolution": "",
+    "extensions": {
+        "SPreset": {
+            "ChatSquash": {
+                "enabled": false,
+                "separate_chat_history": false,
+                "parse_clewd": true,
+                "role": "assistant",
+                "stop_string": "User:",
+                "user_prefix": "\n\nUser:",
+                "user_suffix": "",
+                "char_prefix": "\n\nAssistant:",
+                "char_suffix": "",
+                "prefix_system": "",
+                "suffix_system": "",
+                "enable_squashed_separator": false,
+                "squashed_separator_regex": false,
+                "squashed_separator_string": "",
+                "squashed_post_script_enable": false,
+                "squashed_post_script": ""
+            },
+            "RegexBinding": {
+                "regexes": []
+            },
+            "MacroNest": false
+        },
+        "regex_scripts": [
+            {
+                "id": "807ab21e-f3d5-42bd-a337-e43f7279f905",
+                "scriptName": "修复引号1",
+                "findRegex": "/\\u201c([^\\u201d]*)\\u201d/g",
+                "replaceString": "「$1」",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "b034f77c-eab6-4ced-ac44-31fdadbb4dad",
+                "scriptName": "修复引号2",
+                "findRegex": "/\\u2018([^\\u2019]*)\\u2019/g",
+                "replaceString": "『$1』",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "750cacf9-66ea-467e-81d4-45457c9f88a8",
+                "scriptName": "去用户输入",
+                "findRegex": "^[^]*$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "cc3f19b3-d072-4639-8fe2-9647b9c81d44",
+                "scriptName": "去尖括号",
+                "findRegex": "/<\\/?[a-zA-Z\\u4e00-\\u9fa5][^<>]*?>(?=[\\s\\S]*?<\\/(?:think|thinking)>)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "c9627782-a968-47a9-a08d-68988632b753",
+                "scriptName": "①-美化思维链-默认",
+                "findRegex": "(?:<(think|thinking)>)?([\\s\\S]*?)<\\/(think|thinking)>",
+                "replaceString": "<div class=\"ba-wrapper accelerated\">\n    <div class=\"ba-global-bg\">\n        <video class=\"ba-video\" src=\"https://files.catbox.moe/f2wy2f.mp4\" autoplay loop muted playsinline></video>\n        <div class=\"ba-scanlines\"></div>\n        <div class=\"ba-vignette\"></div>\n    </div>\n    <details class=\"ba-details\">\n        <summary class=\"ba-header\">\n            <span class=\"ba-icon\">☯</span>\n            <span class=\"ba-label\">Touhou</span>\n            <span class=\"ba-arrow\">▼</span>\n        </summary>\n        <div class=\"ba-content ba-scroll\">\n            <div class=\"ba-text\">$2</div>\n        </div>\n    </details>\n</div>\n<style>\n    .ba-wrapper {\n        position: relative;\n        width: 100%;\n        margin: 10px 0;\n        border: 1px solid #444;\n        border-radius: 8px;\n        overflow: hidden;\n        background: #000;\n        box-shadow: 0 4px 12px rgba(0,0,0,0.8);\n        font-family: 'Consolas', monospace;\n        color: #ddd;\n        -webkit-mask-image: -webkit-radial-gradient(white, black);\n        content-visibility: auto;\n        contain-intrinsic-size: 300px;\n        transform: translate3d(0, 0, 0);\n    }\n    .ba-global-bg {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        z-index: 0;\n        pointer-events: none;\n        user-select: none;\n    }\n    .ba-video {\n        width: 100%; height: 100%;\n        object-fit: cover;\n        opacity: 0.4;\n        filter: grayscale(100%) contrast(1.2);\n        will-change: transform;\n    }\n    .ba-scanlines {\n        position: absolute; top: 0; left: 0; width: 100%; height: 100%;\n        background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.5) 3px);\n        z-index: 1;\n        opacity: 0.7;\n    }\n    .ba-vignette {\n        position: absolute; top: 0; left: 0; width: 100%; height: 100%;\n        background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%);\n        z-index: 2;\n    }\n    .ba-details {\n        position: relative;\n        z-index: 10;\n        display: flex;\n        flex-direction: column;\n    }\n    .ba-header {\n        display: flex;\n        align-items: center;\n        padding: 8px 12px;\n        cursor: pointer;\n        user-select: none;\n        background: rgba(0, 0, 0, 0.6);\n        backdrop-filter: blur(4px);\n        border-bottom: 1px solid rgba(255,255,255,0.1);\n        z-index: 20;\n    }\n    .ba-header::-webkit-details-marker, .ba-header::marker { display: none; }\n\n    .ba-icon {\n        margin-right: 8px;\n        font-size: 1.1em;\n        animation: ba-spin 6s linear infinite;\n        text-shadow: 0 0 8px rgba(255,255,255,0.6);\n    }\n    @keyframes ba-spin { 100% { transform: rotate(360deg); } }\n    .ba-label {\n        font-weight: 700;\n        font-size: 0.9em;\n        letter-spacing: 1px;\n        flex-grow: 1;\n        text-transform: uppercase;\n        opacity: 0.9;\n    }\n    .ba-arrow {\n        font-size: 0.8em;\n        opacity: 0.7;\n        transition: transform 0.2s ease;\n    }\n    .ba-details[open] .ba-arrow { transform: rotate(180deg); }\n    .ba-content {\n        min-height: 240px;\n        max-height: 240px;\n        overflow-y: auto;\n        overflow-x: hidden;\n        background: rgba(0, 0, 0, 0.3);\n        position: relative;\n    }\n    .ba-scroll::-webkit-scrollbar {\n        width: 0px;\n    }\n    .ba-scroll::-webkit-scrollbar-track {\n        background: rgba(0,0,0,0);\n    }\n    .ba-scroll::-webkit-scrollbar-thumb {\n        background: rgba(0,0,0,0);\n        border-radius: 0px;\n    }\n    .ba-text {\n        padding: 12px 16px 0px 16px; /* 上 右 下 左 */\n        font-size: 0.9em;\n        line-height: 1.5;\n        white-space: pre-wrap;\n        text-shadow: 1px 1px 0 #000;\n        padding-bottom: 20px;\n    }\n    .ba-details[open] .ba-content {\n        animation: ba-fade-in 0.3s ease;\n    }\n    @keyframes ba-fade-in { from { opacity: 0; } to { opacity: 1; } }\n</style>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "30dd234e-b9e3-4d04-8ca5-a42bd969eb03",
+                "scriptName": "②-同上-挺卡-视频较大(4.8MB)",
+                "findRegex": "(?:<(think|thinking)>)?([\\s\\S]*?)<\\/(think|thinking)>",
+                "replaceString": "<div class=\"suika-wrapper\">\n    <div class=\"suika-bg-layer\">\n        <video class=\"suika-video\" src=\"https://files.catbox.moe/gpdfqc.mp4\" autoplay loop muted playsinline></video>\n        <div class=\"suika-overlay\"></div>\n    </div>\n    <details class=\"suika-details\">\n        <summary class=\"suika-header\">\n            <span class=\"suika-icon\">♞</span>\n            <span class=\"suika-label\">TOUHOU</span>\n            <span class=\"suika-arrow\">▼</span>\n        </summary>\n        <div class=\"suika-content-box\">\n            <div class=\"suika-scroll-view\">\n                <div class=\"suika-text\">$2</div>\n            </div>\n        </div>\n    </details>\n</div>\n<style>\n    :root {\n        --suika-rind-dark: rgba(10, 40, 20, 0.85);\n        --suika-rind-light: #98ff98;\n        --suika-glass-blur: 8px;\n    }\n    .suika-wrapper {\n        position: relative;\n        width: 100%;\n        margin: 10px 0;\n        border: 1px solid rgba(152, 255, 152, 0.3);\n        border-radius: 12px;\n        overflow: hidden;\n        background: #051a05;\n        box-shadow: 0 4px 15px rgba(0, 20, 5, 0.6);\n        font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;\n        color: #fff;\n        contain-intrinsic-size: 300px;\n        transform: translate3d(0, 0, 0);\n        content-visibility: auto;\n        -webkit-mask-image: -webkit-radial-gradient(white, black);\n    }\n    .suika-bg-layer {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        z-index: 0;\n        pointer-events: none;\n        will-change: transform;\n    }\n    .suika-video {\n        width: 100%; height: 100%;\n        object-fit: cover;\n        opacity: 0.7;\n    }\n    .suika-overlay {\n        position: absolute; top: 0; left: 0; width: 100%; height: 100%;\n        background: linear-gradient(180deg, rgba(0, 50, 20, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);\n        mix-blend-mode: multiply;\n        z-index: 1;\n    }\n    .suika-details {\n        position: relative;\n        z-index: 10;\n        display: flex;\n        flex-direction: column;\n        height: 100%;\n    }\n    .suika-header {\n        display: flex;\n        align-items: center;\n        padding: 10px 15px;\n        cursor: pointer;\n        user-select: none;\n        background: rgba(10, 50, 25, 0.8);\n        border-bottom: 1px solid rgba(152, 255, 152, 0.15);\n    }\n    .suika-header:hover {\n        background: rgba(20, 70, 35, 0.7);\n    }\n    .suika-header::-webkit-details-marker, .suika-header::marker { display: none; }\n\n    .suika-icon {\n        margin-right: 10px;\n        font-size: 1.2em;\n        color: var(--suika-rind-light);\n        animation: suika-bounce 0.8s infinite alternate ease-in-out;\n        text-shadow: 0 0 8px rgba(152, 255, 152, 0.4);\n    }\n    @keyframes suika-bounce {\n        0% { transform: translateY(0) rotate(-5deg); }\n        100% { transform: translateY(-3px) rotate(5deg); }\n    }\n    .suika-label {\n        font-weight: 700;\n        font-size: 0.95em;\n        letter-spacing: 1px;\n        flex-grow: 1;\n        text-transform: uppercase;\n        color: #f0fff0;\n    }\n    .suika-arrow {\n        font-size: 0.8em;\n        opacity: 0.8;\n        transition: transform 0.2s ease;\n        color: var(--suika-rind-light);\n    }\n    .suika-details[open] .suika-arrow { transform: rotate(180deg); }\n\n    .suika-content-box {\n        position: relative;\n        background: var(--suika-rind-dark);\n        backdrop-filter: blur(var(--suika-glass-blur));\n        -webkit-backdrop-filter: blur(var(--suika-glass-blur));\n        will-change: opacity;\n    }\n    .suika-scroll-view {\n        min-height: 240px;\n        max-height: 240px;\n        overflow-y: auto;\n        padding: 15px 20px;\n        scrollbar-width: none;\n        -ms-overflow-style: none;\n    }\n    .suika-scroll-view::-webkit-scrollbar {\n        width: 0px;\n        background: transparent;\n    }\n    .suika-text {\n        font-size: 0.85em;\n        line-height: 1.5;\n        white-space: pre-wrap;\n        color: #ffffff;\n        text-shadow: 0 2px 4px rgba(0,0,0,0.8);\n    }\n    .suika-details[open] .suika-content-box {\n        animation: suika-fade 0.3s ease;\n    }\n    @keyframes suika-fade {\n        from { opacity: 0; }\n        to { opacity: 1; }\n    }\n</style>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "34ff7bf0-94a5-4151-a192-d541b1aaf14c",
+                "scriptName": "美化摘要",
+                "findRegex": "<summary>([\\s\\S]*?)<\\/summary>",
+                "replaceString": "<div class=\"tenshi-rec-wrapper\">\n    <div class=\"tenshi-bg\" style=\"background-image: url('https://files.catbox.moe/08xjut.jpg');\"></div>\n    <div class=\"tenshi-overlay\"></div>\n    <div class=\"tenshi-content-box\">\n        <div class=\"tenshi-header\">\n            <span class=\"tenshi-tag\">SUMMARY</span>\n            <span class=\"tenshi-line\"></span>\n            <span class=\"tenshi-id\"></span>\n        </div>\n        <div class=\"tenshi-text\">$1</div>\n    </div>\n</div>\n<style>\n    .tenshi-rec-wrapper {\n        position: relative;\n        width: 100%;\n        min-height: 140px;\n        margin: 10px 0;\n        border-radius: 6px;\n        overflow: hidden;\n        background: #0d0d0d;\n        border: 1px solid #333;\n        box-shadow: 0 2px 5px rgba(0,0,0,0.5);\n        user-select: none;\n        content-visibility: auto;\n        transform: translate3d(0,0,0);\n        -webkit-mask-image: -webkit-radial-gradient(white, black);\n    }\n    .tenshi-bg {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        background-size: cover;\n        background-position: right top;\n        background-repeat: no-repeat;\n        filter: contrast(1.1) brightness(0.9);\n        z-index: 0;\n    }\n    .tenshi-overlay {\n        position: absolute;\n        top: 0; left: 0;\n        width: 100%; height: 100%;\n        z-index: 1;\n        background: linear-gradient(90deg,\n            rgba(17,17,17, 0.95) 0%,\n            rgba(17,17,17, 0.85) 55%,\n            rgba(17,17,17, 0.1) 100%\n        );\n    }\n    .tenshi-content-box {\n        position: relative;\n        z-index: 2;\n        padding: 15px;\n        width: 75%;\n        color: #ddd;\n        font-family: sans-serif;\n    }\n    .tenshi-header {\n        display: flex;\n        align-items: center;\n        margin-bottom: 8px;\n        opacity: 0.7;\n    }\n    .tenshi-tag {\n        font-size: 0.7em;\n        font-weight: bold;\n        background: #ddd;\n        color: #000;\n        padding: 1px 4px;\n        border-radius: 2px;\n        letter-spacing: 1px;\n    }\n    .tenshi-line {\n        flex-grow: 1;\n        height: 1px;\n        background: rgba(255,255,255,0.2);\n        margin: 0 8px;\n    }\n    .tenshi-id {\n        font-size: 0.6em;\n        font-family: 'Consolas', monospace;\n        letter-spacing: 1px;\n    }\n    .tenshi-text {\n        font-size: 0.85em;\n        line-height: 1.4;\n        text-shadow: 0 1px 2px #000;\n        font-style: italic;\n        border-left: 2px solid rgba(255,255,255,0.3);\n        padding-left: 10px;\n    }\n    .tenshi-text p { margin: 0; }\n</style>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "9c90f003-9441-4f68-a022-40e7fb2db487",
+                "scriptName": "去思维链",
+                "findRegex": "/(?:<(think|thinking)>)?([\\s\\S]*?)<\\/(think|thinking)>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "0b56a118-55bc-4596-9228-fc16f26194eb",
+                "scriptName": "去正文标签",
+                "findRegex": "/<\\/?content>(\\n)?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "c262739b-73ab-4f52-afed-123043cd03a0",
+                "scriptName": "去新摘要",
+                "findRegex": "/(\\n\\s*)?<summary>[\\s\\S]*?<\\/summary>(\\s*\\n)?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 6
+            },
+            {
+                "id": "35bf4765-60bc-4bb1-aa65-64579412e3a3",
+                "scriptName": "去旧消息",
+                "findRegex": "/^[\\s\\S]*?<summary>\\s*([\\s\\S]*?)\\s*<\\/summary>[\\s\\S]*$/g",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 6,
+                "maxDepth": null
+            },
+            {
+                "id": "45ab68f6-eeb9-460f-bef8-12fca944db26",
+                "scriptName": "去AI输入",
+                "findRegex": "^[^]*$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 12,
+                "maxDepth": null
+            }
+        ]
+    }
+}

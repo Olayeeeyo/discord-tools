@@ -1,0 +1,17 @@
+{
+    "id": "c1a63a79-1d12-4f2d-a9c5-95f043ba731c",
+    "scriptName": "删八股比喻",
+    "findRegex": "/，就像(.*?)一样|，就像(.*?)自然|就像(.*?)怎么样，|，像(.*?)，|仿佛(.*?)，|，像(.*?)。|仿佛(.*?)。|，指(.*?)白|，语气(.*?)，|，语气(.*?)。|生理性|生理泪水|生理性的|得像(.*?)，|得像(.*?)。|极其/gm",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

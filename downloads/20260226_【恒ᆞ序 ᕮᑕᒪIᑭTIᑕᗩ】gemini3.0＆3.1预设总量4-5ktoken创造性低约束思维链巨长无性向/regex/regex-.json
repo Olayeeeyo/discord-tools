@@ -1,0 +1,17 @@
+{
+    "id": "f44307fb-51d6-4ea4-84c8-4fbac5509053",
+    "scriptName": "声音描写给我去死啊",
+    "findRegex": "/(?<=”[^\\r\\n，。]{0,9})，[ \\t\\u3000\\u4e00-\\u9fff“”‘’\"']*?(?:声音|嗓|喉咙|语气|声调)[ \\t\\u3000\\u4e00-\\u9fff“”‘’\"']*?(?=[，。])/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

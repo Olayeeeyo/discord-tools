@@ -1,0 +1,17 @@
+{
+    "id": "f1d6644e-e0e7-4e5b-8e07-9df48bed2c67",
+    "scriptName": "去除多余内容",
+    "findRegex": "/<思考>(.*?)</思考>|<破限>(.*?)</破限>|<think>(.*?)</think>/gs",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

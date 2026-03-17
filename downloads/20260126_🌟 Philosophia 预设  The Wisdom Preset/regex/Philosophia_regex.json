@@ -1,0 +1,393 @@
+[
+    {
+        "id": "294e4a7b-14e2-4094-a7e4-25e90773a591",
+        "scriptName": "<Infoblock>换行",
+        "findRegex": "<Infoblock>([\\s\\S]*?)<\\/Infoblock>",
+        "replaceString": "<Infoblock>\n\n$1\n</Infoblock>\n",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "b64c49b9-d4d8-46b1-8a46-3ada3dd353d4",
+        "scriptName": "第二人称锁定",
+        "findRegex": "/(?<!「[^」]*|\")(\\bShawn\\b|我)(?![^「]*」|\")/gi",
+        "replaceString": "你",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "c7b47f59-c774-408a-8831-93a53ce39ff8",
+        "scriptName": "隐藏<img>",
+        "findRegex": "/<img\\b(?:[^\"'<>]|\"[^\"]*\"|'[^']*')*>/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "d4c11ac3-07b4-4697-bba8-669cdc618c6b",
+        "scriptName": "隐藏<pic>",
+        "findRegex": "<pic>([\\s\\S]*?)<\\/pic>",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "778b0384-3447-492f-8b2b-84d66484e51e",
+        "scriptName": "剧情折叠",
+        "findRegex": "<plot>([\\s\\S]*?)<\\/plot>",
+        "replaceString": "<details><summary>剧情</summary>\n$1\n</details>\n",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "58c72a7c-0f36-489c-8e1d-0e5d4e8e0af9",
+        "scriptName": "Cot思考",
+        "findRegex": "<(?:Log|strategy_log|thoughts)>([\\s\\S]*?)<\\/(?:Log|strategy_log|thoughts)>",
+        "replaceString": "\n",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "c9fa4e30-bd6d-4618-a6da-edca8125a211",
+        "scriptName": "去除杂项",
+        "findRegex": "/(^\\s*<Narrator>\\s*$)|(<Narrator>)|(<disclaimer>[\\s\\S]*?<\\/disclaimer>)|(<visual_catalyst>[\\s\\S]*?<\\/visual_catalyst>)|(<tableEdit[\\s\\S]*?<\\/tableEdit>)|(Narrator:)|(\\[done\\])|(<thinking>)|(<\\/thinking>)|(Narrator[\\s　]*[:：][\\s　]*正文)|(<正文>)|(<IMAGE_WEAVER_PROTOCOL>)|(</IMAGE_WEAVER_PROTOCOL>)|(<Visual_Weaver>[\\s\\S]*?<\\/Visual_Weaver>)|(<story>)|(</story>)|(\\[System:[^\\]]*\\])/gis",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "1f49cc4f-2f20-43a8-8095-4dcfbdbe93ee",
+        "scriptName": "摘要不显示",
+        "findRegex": "/(<Summary>[\\s\\S]*?<\\/Summary>|<abstract>[\\s\\S]*?<\\/abstract>|<recap>[\\s\\S]*?<\\/recap>)/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "9a444a93-8853-4977-956b-d21e810260b0",
+        "scriptName": "匹配X楼外的正文/((^|(?<=<\\/Summary>)|(?<=<\\/abstract>)|(?<=<\\/recap>)|(?<=<\\/plot>)|(?<=<\\/thoughts>))[\\s\\S]*?(?=<Summary>|<abstract>|<recap>|<plot>|<thoughts>|$))/g",
+        "findRegex": "/((^|(?<=<\\/Summary>)|(?<=<\\/abstract>)|(?<=<\\/recap>))[\\s\\S]*?(?=<Summary>|<abstract>|<recap>|$))/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 10,
+        "maxDepth": null
+    },
+    {
+        "id": "0db6ce1c-52b2-4de2-ae53-0ebb7eb1258b",
+        "scriptName": "匹配X楼内的recap",
+        "findRegex": "/<(?:Summary|abstract|recap)>([\\s\\S]*?)<\\/(?:Summary|abstract|recap)>/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 11
+    },
+    {
+        "id": "cca90253-5fa3-4a21-97e5-cb1b16ef6f70",
+        "scriptName": "行动选项",
+        "findRegex": "/((?:<opt\\d+>.*?<\\/opt\\d+>(?:\\s*<note\\d+>.*?<\\/note\\d+>)?\\s*)+)/si",
+        "replaceString": "```html\n<!DOCTYPE html>\n<html>\n\n<head>\n    <title>最终版-大字体简约灰毛玻璃</title>\n    <style>\n        /* 引入和主题一致的字体 */\n        @import url('https://fonts.loli.net/css2?family=Inter:wght@400;500;700&display=swap');\n        @import url('https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500&display=swap');\n\n        :root {\n            /* 严格遵循主题的颜色、透明度和边框设置 */\n            --theme-bg: rgba(35, 35, 40, 0.15);\n            --theme-border: rgba(255, 255, 255, 0.15);\n            --theme-text: rgba(240, 240, 240, 1);\n            --theme-hover-bg: rgba(50, 50, 60, 0.2);\n            --theme-hover-border: rgba(255, 255, 255, 0.25);\n            --theme-hover-glow: 0 0 10px 2px rgba(255, 255, 255, 0.2);\n            --theme-active-bg: rgba(80, 80, 90, 0.3);\n            --theme-active-glow: 0 0 12px 3px rgba(255, 255, 255, 0.4);\n        }\n\n        body {\n            background-color: transparent;\n            margin: 0;\n            padding: 0;\n            font-family: 'Noto Sans SC', 'Inter', sans-serif;\n        }\n\n        .card-final-version {\n            display: flex;\n            flex-direction: column;\n            width: 100%;\n            padding: 0;\n        }\n\n        .button-group-final {\n            display: flex;\n            flex-direction: column;\n            gap: 5px;\n        }\n\n        .button-row-final {\n            display: flex;\n            align-items: center;\n            width: 100%;\n            box-sizing: border-box;\n            border-radius: 10px;\n            border: 1px solid var(--theme-border);\n            background-color: var(--theme-bg);\n            backdrop-filter: blur(5px);\n            -webkit-backdrop-filter: blur(5px);\n            transition: all 0.3s ease;\n            position: relative;\n            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n        }\n\n        .button-row-final:hover {\n            background-color: var(--theme-hover-bg);\n            border-color: var(--theme-hover-border);\n            box-shadow: var(--theme-hover-glow);\n            transform: translateY(-2px);\n        }\n\n        .action-btn-main {\n            flex: 1;\n            padding: 10px 16px;\n            font-size: 16px;\n            font-weight: 500;\n            text-align: left;\n            color: var(--theme-text);\n            cursor: pointer;\n            border: none;\n            background: transparent;\n            font-family: inherit;\n            outline: none;\n            border-radius: 10px 0 0 10px;\n        }\n\n        .action-btn-copy {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            width: 32px;\n            height: 32px;\n            margin-right: 10px;\n            border-radius: 8px;\n            background-color: rgba(255, 255, 255, 0.03);\n            border: 1px solid rgba(255, 255, 255, 0.08);\n            color: rgba(255, 255, 255, 0.5);\n            cursor: pointer;\n            transition: all 0.2s ease;\n            flex-shrink: 0;\n        }\n\n        .action-btn-copy:hover {\n            background-color: rgba(255, 255, 255, 0.15);\n            border-color: rgba(255, 255, 255, 0.4);\n            color: #fff;\n            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);\n        }\n\n        .action-btn-copy svg {\n            width: 16px;\n            height: 16px;\n            fill: currentColor;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"card-final-version\">\n        <div class=\"button-group-final\" id=\"button-container\">\n            <!-- 动态生成的按钮将放在这里 -->\n        </div>\n    </div>\n\n    <script type=\"text/plain\" id=\"raw-options-data\">$1</script>\n\n    <script>\n        function createButtonRow(text, note) {\n            const row = document.createElement('div');\n            row.className = 'button-row-final';\n\n            // 主按钮\n            const mainBtn = document.createElement('button');\n            mainBtn.className = 'action-btn-main';\n            mainBtn.textContent = text;\n            mainBtn.setAttribute('data-action', text);\n\n            // 仅保留原生 title 属性\n            if (note) {\n                mainBtn.title = note;\n                // 也可以给整行加 title，这样鼠标放在空白处也能看到\n                row.title = note;\n            }\n\n            // 复制按钮\n            const copyBtn = document.createElement('div');\n            copyBtn.className = 'action-btn-copy';\n            copyBtn.setAttribute('data-action', text);\n            copyBtn.title = '复制';\n            copyBtn.innerHTML = '<svg viewBox=\"0 0 24 24\"><path d=\"M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z\"/></svg>';\n\n            mainBtn.addEventListener('click', (e) => {\n                e.stopPropagation();\n                if (typeof triggerSlash === 'function') {\n                    triggerSlash(`/send ${text}|/trigger`);\n                }\n            });\n\n            copyBtn.addEventListener('click', (e) => {\n                e.stopPropagation();\n                try {\n                    const input = window.parent.document.querySelector('#send_textarea');\n                    if (input) {\n                        const cur = input.value.trim();\n                        input.value = cur ? `${cur} ${text}` : text;\n                        input.dispatchEvent(new Event('input', { bubbles: true }));\n\n                        const svg = copyBtn.querySelector('svg');\n                        const original = svg.innerHTML;\n                        svg.innerHTML = '<path d=\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/>';\n                        copyBtn.style.color = '#4cd137';\n                        setTimeout(() => {\n                            svg.innerHTML = original;\n                            copyBtn.style.color = '';\n                        }, 1000);\n                    }\n                } catch (err) { console.error(err); }\n            });\n\n            row.appendChild(mainBtn);\n            row.appendChild(copyBtn);\n            return row;\n        }\n\n        const rawData = document.getElementById('raw-options-data').textContent;\n        const container = document.getElementById('button-container');\n\n        const regex = /<opt(\\d+)>([\\s\\S]*?)<\\/opt\\1>(?:\\s*<note\\1>([\\s\\S]*?)<\\/note\\1>)?/gi;\n        let match;\n\n        container.innerHTML = '';\n\n        while ((match = regex.exec(rawData)) !== null) {\n            const content = match[2].trim();\n            const note = match[3] ? match[3].trim() : null;\n\n            if (content) {\n                const row = createButtonRow(content, note);\n                container.appendChild(row);\n            }\n        }\n    </script>\n</body>\n\n</html>\n```",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 3
+    },
+    {
+        "id": "3e4f80a7-724e-4360-ac99-0e136a55c9af",
+        "scriptName": "清除选项",
+        "findRegex": "/((?:<opt\\d+>.*?<\\/opt\\d+>(?:\\s*<note\\d+>.*?<\\/note\\d+>)?\\s*)+)/gi",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 3,
+        "maxDepth": null
+    },
+    {
+        "id": "80006acc-7791-447b-be24-aeb8e91d5fb2",
+        "scriptName": "去Cliche-拉满的弓",
+        "findRegex": "([，。])\\s*(?:(?:像|如同|好似|仿佛|犹如|就像|好比|像是?)\\s*(?:一[张把个]?)?)?拉满的弓",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "1cb244fe-3b06-4db6-8593-7acf17d6df1f",
+        "scriptName": " 去Cliche-令人牙酸",
+        "findRegex": "([，。])?\\s*(?:发出|传来)?(?:了|的)?(?:一[阵声个])?(?:令人|让人)?(?:牙酸|牙软)(?:的(?:声音|响声|声响|动静|摩擦声))?",
+        "replaceString": "$1{{random:极其刺耳,尖锐得令人头皮发麻,令人毛骨悚然,刮擦玻璃般刺耳,令人不适,尖利粗糙}}",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "f516e27c-d438-4051-b5ea-41c5f3f55b18",
+        "scriptName": "去Cliche-小兽",
+        "findRegex": "([，。])?\\s*(?:(?:像|如同|好似|仿佛|犹如|就像|好比|像是?)\\s*(?:一[只头]?)?)?(?:小兽|幼兽)",
+        "replaceString": "小猫",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "8bd22efa-4b26-4695-a745-86483eecfe7e",
+        "scriptName": "去Cliche-指尖泛白",
+        "findRegex": "([，。])?\\s*(?:直?到?)?(?:指尖|指节|手指|双手|拳头|指关节)(?:微微|有些|过于|开始)?(?:发|泛|惨)白",
+        "replaceString": "$1{{random:指关节因过度用力而凸起,指甲深深嵌入掌心,双手死死攥紧,用力得几乎要捏碎手中之物}}",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "325932df-b706-4123-a8be-4a1fb02f100f",
+        "scriptName": "去Cliche - 没有[什么]，也没有[什么]",
+        "findRegex": "([，。！？\\n]|^)\\s*[^，。！？\\n]*?(?:没有[^，。！？\\n]+[，]\\s*[^，。！？\\n]*?(?:也|更|又)?没有|不是[^，。！？\\n]+[，]\\s*[^，。！？\\n]*?(?:也|又|更)?不是)[^。！？\\n]+[。！？]?",
+        "replaceString": "$1",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "984dfa2c-7d51-4913-a553-a4e718b98b38",
+        "scriptName": "去Cliche - 手术刀",
+        "findRegex": "([，。])?\\s*(?:(?:像|如同|好似|仿佛|犹如|就像|好比|像是?)\\s*(?:一[把个]?)?)?手术刀",
+        "replaceString": "$1{{random:锋利的冰棱,冰冷的锋芒,无形的利刃,刺骨的寒芒,锐利得仿佛能剖开一切,带着审视与解剖般的冰冷,精准而冷酷的探针}}",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "9fd732fc-25c6-4659-8ce0-6261d608d173",
+        "scriptName": "去Cliche - 一个世纪",
+        "findRegex": "/(过了[^——，,。！？\\n]+?)(?:[—-]+|[，,])\\s*(?:也|又|更)?(?:可能|也许|或者|许是|若是|仿佛|好似)[^。！？\\n]+([。！？]?)/g",
+        "replaceString": "$1$2",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "5ba6cc4d-090e-4560-b065-a21decbcd0d8",
+        "scriptName": "去Cliche - 共犯",
+        "findRegex": "/共犯/g",
+        "replaceString": "{{random:同谋,同伙,盟友,是一条船上的人,共同沉沦的同伴,拥有共同秘密的人,绑在同一根绳上的蚂蚱,唯一的同盟}}",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "d412f83b-4adb-44f8-8973-f2b1713ee40e",
+        "scriptName": "去Cliche - 他/她不等你回答",
+        "findRegex": "/(?:(?:他|她)\\s*)?(?:根本|完全|并没有|没|不|没有)\\s*(?:等|待)\\s*(?:你|{{user}})\\s*(?:(?:做?出?)?(?:回答|回应|解释)|开口|说话)(?:——+|[—-]+|[，,。])?\\s*/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "6e8b0c19-33a9-4290-96f9-cae2e83fbd9a",
+        "scriptName": "Markdown修复 1",
+        "findRegex": "/<div\\b([^>]*)>/g",
+        "replaceString": "<span style=\"display:block;\" $1>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "d0410cd7-f9af-4340-b024-8ef08ad7817e",
+        "scriptName": "Markdown修复 2",
+        "findRegex": "/<\\/div>/g",
+        "replaceString": "</span>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    }
+]
